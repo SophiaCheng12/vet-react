@@ -1,0 +1,790 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* / HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* dr.vet */
+
+/* nav */
+.content {
+  width: 100%;
+  max-width: 95.63rem;
+}
+
+.nav {
+  height: 13.85rem;
+  border-bottom: 23px solid #e5e5e5;
+}
+
+.brand {
+  height: 6.88rem;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.navbarBrand {
+  margin: 0 auto;
+}
+
+.totalBrandBtn {
+  display: flex;
+  margin-top: 2.81rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.descriptionBtn {
+  background-color: #f2af44;
+  width: 6.31rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  color: #fafafa;
+  font-weight: 700;
+  font-family: "roboto";
+  font-size: 1.5rem;
+  border: none;
+  margin-right: 1.3rem;
+  white-space: nowrap;
+}
+
+.signOutBtn {
+  background-color: #cb5c5c;
+  width: 6.31rem;
+  height: 2.8rem;
+  border-radius: 5px;
+  color: #fafafa;
+  font-weight: 700;
+  font-family: "roboto";
+  font-size: 1.5rem;
+  border: none;
+  white-space: nowrap;
+}
+
+.navList {
+  width: 100%;
+  height: 5.45rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar1 {
+  /* border:1px solid red; */
+  margin: 0 auto;
+}
+
+.navbarTitle {
+  /* color:#F2AF44 !important; */
+  font-weight: 800;
+  font-family: "roboto";
+  font-size: 1.5rem;
+}
+
+#navbarSupportedContent .nav-link {
+  color: black;
+  font-weight: 600;
+  font-family: "roboto";
+  font-size: 1.37rem;
+}
+
+.active {
+  color: #f2af44 !important;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  border-bottom: 0.5rem solid #f2af44;
+  position: absolute;
+  width: 120px;
+  bottom: -1.77rem;
+  left: -0.8rem;
+}
+
+/* main */
+
+.search {
+  border-bottom: 6px solid #f2af44;
+  height: 7.1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search p {
+  font-weight: 700;
+  font-size: 1.75rem;
+  font-family: "Roboto";
+}
+
+.searchForm {
+  /* border:1px solid blue; */
+  margin-top: 1.93rem;
+}
+
+.form {
+  /* border:1px solid purple; */
+  margin: 0 auto;
+}
+
+.product {
+  color: #3e414f;
+  font-weight: 700;
+  font-size: 1.13rem;
+  font-family: "Roboto";
+  line-height: 1.32rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  /* background:pink; */
+  width: 18.43rem;
+  height: 1.56rem;
+  border-color: lightgray;
+  border-radius: 0rem;
+}
+
+input.form-control:focus {
+  border-color: #ccc;
+  outline: none;
+  box-shadow: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  border-color: lightgray;
+  border-radius: 0rem;
+  font-size: 0.5rem;
+  padding-bottom: 0rem;
+  width: 18.43rem;
+  height: 1.56rem;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  background: url("../../images/Polygon 1.png") no-repeat 97% center;
+  padding-right: 3rem;
+}
+
+select.form-control:focus {
+  border-color: #ccc;
+  outline: none;
+  box-shadow: none;
+}
+
+.productSupplier {
+  margin-left: 1.1rem;
+  width: 12.43rem !important;
+}
+
+.productBrand {
+  margin-left: 2.2rem;
+  width: 18.7rem !important;
+}
+
+.inquireBtn {
+  background-color: #f2af44;
+  width: 2.5rem;
+  height: 1.3rem;
+  border-radius: 0rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 1.03rem;
+  position: relative;
+  margin-left: 0.38rem;
+  margin-top: 0.2rem;
+  color: white;
+}
+
+.buttonWord {
+  position: absolute;
+  left: 0.38rem;
+  top: 0.1rem;
+}
+
+.removeBtn {
+  background-color: #f2af44;
+  width: 2.5rem;
+  height: 1.3rem;
+  border-radius: 0rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 1.03rem;
+  position: relative;
+  margin-left: 0.38rem;
+  margin-top: 0.2rem;
+  color: white;
+}
+
+.removeButtonWord {
+  position: absolute;
+  left: 0.38rem;
+  top: 0.1rem;
+}
+
+.commodityAttributesInput {
+  width: 12.43rem !important;
+}
+
+.totalBtn {
+  /* border:1px solid red; */
+  margin-left: 1.1rem;
+  margin-bottom: 4.3rem;
+}
+
+.searchFormBtn {
+  border: 1px solid #3e414f;
+  border-radius: 0px;
+  width: 6.88rem;
+  height: 2.18rem;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+/* .searchFormBtn:hover{
+  background-color:#F2AF44;
+  border:none;
+} */
+
+.buttonActive {
+  background-color: #f2af44 !important;
+  border: none;
+}
+
+button {
+  border-color: #ccc !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* createProduct */
+.createProduct {
+  /* border:1px solid red; */
+  margin-bottom: 4.93rem;
+}
+
+.firstPart {
+  margin-bottom: 0.36rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.createProductWord {
+  color: #f2af44;
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-left: 0.36rem;
+  align-items: center;
+}
+
+.firstPaginationImg {
+  border: 1px solid black;
+  background-color: #3e414f;
+  width: 2.37rem;
+  height: 1.31rem;
+  border-radius: 1.3px;
+  justify-content: space-evenly;
+}
+
+.paginationWord {
+  color: #3e414f;
+  font-size: 0.85rem;
+  font-weight: 600;
+  align-items: center;
+  margin: 0 0.43rem;
+}
+
+.secondPaginationImg {
+  border: 1px solid black;
+  background-color: #3e414f;
+  width: 2.37rem;
+  height: 1.31rem;
+  border-radius: 1.3px;
+  justify-content: space-evenly;
+}
+
+.createProductTr {
+  text-align: center;
+}
+
+.secondPart .table {
+  width: 90.75rem;
+  margin: 0 auto;
+}
+
+.bottomPagination {
+  margin-top: 0.56rem;
+}
+
+.bottomPaginationTitle {
+  opacity: 0;
+}
+
+/* media */
+@media screen and (max-width: 1000px) {
+  .navList {
+    width: 100%;
+    height: 5.45rem;
+    margin-top: 0;
+    /* border:1px solid blue; */
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar1 {
+    /* border:1px solid blue; */
+    margin-left: 0rem;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbarTitle {
+    /* background:purple; */
+    height: 80px;
+    padding-top: 2rem;
+  }
+
+  .active {
+    /* border:1px solid red; */
+    color: #f2af44 !important;
+    position: relative;
+  }
+
+  .active::after {
+    content: "";
+    border-bottom: 0.5rem solid #f2af44;
+    position: absolute;
+    width: 120px;
+    bottom: -0.3rem;
+    left: -0.8rem;
+  }
+}
+
+@media screen and (max-width: 61.99rem) {
+  .navbarRelative {
+    position: relative;
+  }
+
+  .navbarColor {
+    background-color: #f2af44;
+    position: absolute;
+    /* position:relative; */
+    right: 0rem;
+    width: 20rem;
+    text-align: center;
+  }
+
+  .navItemColor {
+    color: white;
+  }
+
+  .active::after {
+    content: "";
+    border-bottom: 0.5rem solid #f2af44;
+    position: absolute;
+    width: 120px;
+    bottom: -0.1em;
+    left: -0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbarBrand {
+    /* border:1px solid red; */
+    position: absolute;
+    top: 1rem;
+    left: 0.5rem;
+  }
+
+  .totalBrandBtn {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .brandImg {
+    width: 90%;
+  }
+
+  .totalBrandBtn {
+    display: flex;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.5rem;
+  }
+
+  .descriptionBtn {
+    background-color: #f2af44;
+    width: 5rem;
+    height: 2.8rem;
+    border-radius: 5px;
+    color: #fafafa;
+    font-weight: 700;
+    font-family: "roboto";
+    font-size: 1.1rem;
+    border: none;
+    margin-right: 1.3rem;
+    white-space: nowrap;
+  }
+
+  .signOutBtn {
+    background-color: #cb5c5c;
+    margin-right: 1rem;
+    width: 5rem;
+    height: 2.8rem;
+    border-radius: 5px;
+    color: #fafafa;
+    font-weight: 700;
+    font-family: "roboto";
+    font-size: 1.1rem;
+    border: none;
+    white-space: nowrap;
+  }
+
+  .descriptionImg {
+    width: 16%;
+  }
+
+  .signOutImg {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .navbarRelative {
+    position: relative;
+  }
+
+  .navbarColor {
+    background-color: #f2af44;
+    position: absolute;
+    /* position:relative; */
+    right: 0rem;
+    width: 15rem;
+    text-align: center;
+  }
+
+  .navItemColor {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 397px) {
+  .brandImg {
+    width: 70%;
+    /* border:1px solid blue; */
+  }
+
+  .totalBrandBtn {
+    /* border:1px solid purple; */
+    display: flex;
+    position: absolute;
+    right: 0rem;
+    top: 0.5rem;
+  }
+
+  .descriptionBtn {
+    background-color: #f2af44;
+    width: 4.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    color: #fafafa;
+    font-weight: 700;
+    font-family: "roboto";
+    font-size: 1rem;
+    border: none;
+    margin-right: 1.3rem;
+    white-space: nowrap;
+    padding-left: 0.4rem;
+  }
+
+  .signOutBtn {
+    background-color: #cb5c5c;
+    margin-right: 1rem;
+    width: 4.5rem;
+    height: 2.5rem;
+    border-radius: 5px;
+    color: #fafafa;
+    font-weight: 700;
+    font-family: "roboto";
+    font-size: 1rem;
+    border: none;
+    white-space: nowrap;
+    padding-left: 0.3rem;
+  }
+
+  .descriptionImg {
+    width: 13%;
+  }
+
+  .signOutImg {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .navbarRelative {
+    position: relative;
+  }
+
+  .navbarColor {
+    background-color: #f2af44;
+    position: absolute;
+    right: 0rem;
+    width: 10rem;
+    text-align: center;
+  }
+
+  .navItemColor {
+    color: white;
+  }
+
+  .product {
+    font-size: 1rem;
+  }
+
+  #productBrandId {
+    margin-right: -0.2rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 18.43rem;
+    height: 1.56rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+  }
+
+  .inquireBtn {
+    background-color: #f2af44;
+    width: 2rem;
+    height: 1.3rem;
+    border-radius: 0rem;
+    font-size: 0.88rem;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1.03rem;
+    position: relative;
+    margin-left: 0.38rem;
+    margin-top: 0.2rem;
+    color: white;
+  }
+
+  .buttonWord {
+    position: absolute;
+    left: 0.06rem;
+    top: 0.1rem;
+  }
+
+  .removeBtn {
+    background-color: #f2af44;
+    width: 2rem;
+    height: 1.3rem;
+    border-radius: 0rem;
+    font-size: 0.88rem;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1.03rem;
+    position: relative;
+    margin-left: 0.38rem;
+    margin-top: 0.2rem;
+    color: white;
+  }
+
+  .removeButtonWord {
+    position: absolute;
+    left: 0.06rem;
+    top: 0.1rem;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .select {
+    border-color: lightgray;
+    border-radius: 0rem;
+    font-size: 0.5rem;
+    width: 18.43rem;
+    height: 1.56rem;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    background: url("../../images/Polygon 1.png") no-repeat 97% center;
+  }
+
+  .commodityAttributesInput {
+    width: 13.4rem !important;
+  }
+
+  .productSupplier {
+    margin-left: 1rem;
+    width: 13.4rem !important;
+  }
+}
+
+@media screen and (max-width: 23.7rem) {
+  .product {
+    font-size: 0.9rem;
+  }
+
+  #productSupplierId {
+    margin-right: -0.1rem;
+  }
+
+  #productBrandId {
+    margin-right: -0.4rem;
+  }
+
+  .searchFormBtn {
+    border: 1px solid #3e414f;
+    border-radius: 0px;
+    width: 6.5rem;
+    height: 2.18rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+}
