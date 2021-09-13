@@ -2,14 +2,31 @@ import React from "react";
 
 class ProductList extends React.Component {
   state = {
-    productList: [],
+    isNew: true,
+  };
+
+  // handleShow = (isNew, item) => {
+  //   this.props.setShowModal(true);
+  //   console.log(isNew);
+  // console.log(this.props.obj);
+  // if (isNew === false) {
+  //   this.props.obj = object.assign({}, item);
+  // }
+  // };
+
+  handleClose = () => {
+    this.props.setShowModal(false);
+  };
+
+  onEditClick = () => {
+    // 打開modal
+    // 更新editingProduct
   };
 
   renderProductList(list) {
     return list.map((item, index) => {
       return (
         <tr key={index}>
-          {/* <th scope="row">{item.item}</th> */}
           <th scope="row">{(item.item = index + 1)}</th>
           <td>{item.commodityCode}</td>
           <td className="ellipsis">{item.productName}</td>
@@ -20,8 +37,12 @@ class ProductList extends React.Component {
           <td>{item.salesPriceSetting} </td>
           <td>{item.purchasePriceSetting} </td>
           <td>{item.cannedSmsSettings}</td>
-          <td>{item.modify}</td>
-          <td>{item.delete}</td>
+          <td>
+            <img src="./Img/modify.png" alt="" onClick={this.onEditClick} />
+          </td>
+          <td>
+            <img src="./Img/bin.png" alt="" />
+          </td>
         </tr>
       );
     });
@@ -38,7 +59,12 @@ class ProductList extends React.Component {
               <div>
                 <img src="./Img/Vector3.png" alt="" />
               </div>
-              <div className="createProductWord d-flex flex-row">新增商品</div>
+              <div
+                className="createProductWord d-flex flex-row"
+                onClick={() => this.handleShow(true)}
+              >
+                新增商品
+              </div>
             </div>
 
             <div></div>

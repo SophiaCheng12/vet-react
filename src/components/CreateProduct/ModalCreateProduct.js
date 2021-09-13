@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
 const ModalCreateProduct = (props) => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleClose = () => props.setShowModal(false);
+  const handleShow = () => props.setShowModal(true);
+
   const [item, setItem] = useState(0);
   const [commodityCode, setCommodityCode] = useState("");
   const [productName, setProductName] = useState("");
@@ -18,8 +21,8 @@ const ModalCreateProduct = (props) => {
   const [cannedSmsSettings, setCannedSmsSettings] = useState("");
 
   const handleClick = () => {
-    console.log("ok");
-    let text = {
+    // console.log("ok");
+    let obj = {
       item: item,
       commodityCode: commodityCode,
       productName: productName,
@@ -30,23 +33,21 @@ const ModalCreateProduct = (props) => {
       salesPriceSetting: salesPriceSetting,
       purchasePriceSetting: purchasePriceSetting,
       cannedSmsSettings: cannedSmsSettings,
-      modify: <img src="./Img/modify.png" alt="" />,
-      delete: <img src="./Img/bin.png" alt="" />,
     };
 
-    console.log("text", text);
+    console.log("obj", obj);
 
-    props.handleModal(text);
+    props.handleModal(obj);
     handleClose();
   };
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      {/* <Button variant="primary" onClick={handleShow}>
         新增商品
-      </Button>
+      </Button> */}
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={props.showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>新增商品</Modal.Title>
         </Modal.Header>
