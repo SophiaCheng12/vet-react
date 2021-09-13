@@ -6,6 +6,7 @@ const ModalCreateProduct = (props) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [item, setItem] = useState(0);
   const [commodityCode, setCommodityCode] = useState("");
   const [productName, setProductName] = useState("");
   const [commodityCategory, setCommodityCategory] = useState("");
@@ -15,11 +16,11 @@ const ModalCreateProduct = (props) => {
   const [salesPriceSetting, setSalesPriceSetting] = useState("");
   const [purchasePriceSetting, setPurchasePriceSetting] = useState("");
   const [cannedSmsSettings, setCannedSmsSettings] = useState("");
-  // this.handleClick = this.handleClick.bind(this);
 
   const handleClick = () => {
     console.log("ok");
     let text = {
+      item: item,
       commodityCode: commodityCode,
       productName: productName,
       commodityCategory: commodityCategory,
@@ -29,11 +30,14 @@ const ModalCreateProduct = (props) => {
       salesPriceSetting: salesPriceSetting,
       purchasePriceSetting: purchasePriceSetting,
       cannedSmsSettings: cannedSmsSettings,
+      modify: <img src="./Img/modify.png" alt="" />,
+      delete: <img src="./Img/bin.png" alt="" />,
     };
 
     console.log("text", text);
 
     props.handleModal(text);
+    handleClose();
   };
 
   return (

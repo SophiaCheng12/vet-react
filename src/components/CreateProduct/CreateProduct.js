@@ -6,33 +6,123 @@ import ProductList from "./ProductList.js";
 import ModalCreateProduct from "./ModalCreateProduct.js";
 import "./CreateProduct.css";
 
+const productList = [
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+  {
+    item: 1,
+    commodityCode: 61802,
+    productName: "Dog Bed Gent antibac 80x60 cm",
+    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
+    commodityAttributes: "商品",
+    internationalBarcode: "4016739618023",
+    price: "2360",
+    salesPriceSetting: "銷售價格維護",
+    purchasePriceSetting: "採購價格維護",
+    cannedSmsSettings: "罐頭簡訊設定",
+    modify: <img src="./Img/modify.png" alt="" />,
+    delete: <img src="./Img/bin.png" alt="" />,
+  },
+];
+
 class CreateProduct extends React.Component {
-  // constructor(props) {
-  // super(props);
   state = {
-    data: {
-      item: 1,
-      commodityCode: 61802,
-      productName: " ",
-      commodityCategory: " ",
-      commodityAttributes: " ",
-      internationalBarcode: " ",
-      price: " ",
-      salesPriceSetting: " ",
-      purchasePriceSetting: " ",
-      cannedSmsSettings: " ",
-      modify: <img src="./Img/modify.png" alt="" />,
-      delete: <img src="./Img/bin.png" alt="" />,
-    },
+    productList: [],
   };
-  // this.handleModal = this.handleModal.bind(this);
-  // }
+
+  componentDidMount() {
+    this.setState({
+      productList: productList,
+    });
+  }
 
   handleModal(text) {
     console.log("text2", text);
 
     this.setState({
-      data: { ...this.state.data, text },
+      productList: [...this.state.productList, text],
     });
   }
 
@@ -45,7 +135,7 @@ class CreateProduct extends React.Component {
         </div>
         <ProductMain />
         <ModalCreateProduct handleModal={(text) => this.handleModal(text)} />
-        <ProductList />
+        <ProductList productList={this.state.productList} />
       </div>
     );
   }

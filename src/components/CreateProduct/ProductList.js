@@ -1,116 +1,9 @@
 import React from "react";
 
-const productList = [
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-  {
-    item: 1,
-    commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
-    commodityCategory: "[------- 品牌商品 -------]-Hunter ",
-    commodityAttributes: "商品",
-    internationalBarcode: "4016739618023",
-    price: "2360",
-    salesPriceSetting: "銷售價格維護",
-    purchasePriceSetting: "採購價格維護",
-    cannedSmsSettings: "罐頭簡訊設定",
-    modify: <img src="./Img/modify.png" alt="" />,
-    delete: <img src="./Img/bin.png" alt="" />,
-  },
-];
-
 class ProductList extends React.Component {
   state = {
     productList: [],
   };
-
-  componentDidMount() {
-    this.setState({
-      productList: productList,
-    });
-  }
 
   renderProductList(list) {
     return list.map((item, index) => {
@@ -135,6 +28,7 @@ class ProductList extends React.Component {
   }
 
   render() {
+    const { productList } = this.props;
     return (
       <div>
         {/* createProduct */}
@@ -233,7 +127,7 @@ class ProductList extends React.Component {
                       </td>
                     </tr> */}
 
-                    {this.renderProductList(this.state.productList)}
+                    {this.renderProductList(productList)}
                   </tbody>
                 </table>
               </div>
