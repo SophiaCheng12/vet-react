@@ -2,7 +2,7 @@ import React from "react";
 
 class ProductList extends React.Component {
   state = {
-    isNew: true,
+    isNew: false,
   };
 
   // handleShow = (isNew, item) => {
@@ -18,16 +18,33 @@ class ProductList extends React.Component {
     this.props.setShowModal(false);
   };
 
-  onEditClick = () => {
+  onBuildClick = () => {
     // 打開modal
+    this.props.setShowModal(true);
     // 更新editingProduct
+    this.props.newEditingProduct();
+  };
+
+  onEditClick = (userIndex, e) => {
+    // 打開modal
+    this.props.setShowModal(true);
+    // 更新editingProduct
+    console.log(userIndex);
+
+    this.props.productList.forEach((product, index) => {
+      // console.log("e2", e.target.index);
+      if (userIndex === index) {
+        console.log("product", product);
+        this.props.replaceEditingProduct(product);
+      }
+    });
   };
 
   renderProductList(list) {
     return list.map((item, index) => {
       return (
         <tr key={index}>
-          <th scope="row">{(item.item = index + 1)}</th>
+          <th scope="row">{index + 1}</th>
           <td>{item.commodityCode}</td>
           <td className="ellipsis">{item.productName}</td>
           <td>{item.commodityCategory}</td>
@@ -38,7 +55,11 @@ class ProductList extends React.Component {
           <td>{item.purchasePriceSetting} </td>
           <td>{item.cannedSmsSettings}</td>
           <td>
-            <img src="./Img/modify.png" alt="" onClick={this.onEditClick} />
+            <img
+              src="./Img/modify.png"
+              alt=""
+              onClick={(e) => this.onEditClick(index, e)}
+            />
           </td>
           <td>
             <img src="./Img/bin.png" alt="" />
@@ -61,7 +82,7 @@ class ProductList extends React.Component {
               </div>
               <div
                 className="createProductWord d-flex flex-row"
-                onClick={() => this.handleShow(true)}
+                onClick={() => this.onBuildClick(true)}
               >
                 新增商品
               </div>

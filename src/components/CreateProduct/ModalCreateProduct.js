@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal } from "react-bootstrap";
 
 const ModalCreateProduct = (props) => {
@@ -9,35 +9,14 @@ const ModalCreateProduct = (props) => {
   const handleClose = () => props.setShowModal(false);
   const handleShow = () => props.setShowModal(true);
 
-  const [item, setItem] = useState(0);
-  const [commodityCode, setCommodityCode] = useState("");
-  const [productName, setProductName] = useState("");
-  const [commodityCategory, setCommodityCategory] = useState("");
-  const [commodityAttributes, setCommodityAttributes] = useState("");
-  const [internationalBarcode, setInternationalBarcode] = useState("");
-  const [price, setPrice] = useState("");
-  const [salesPriceSetting, setSalesPriceSetting] = useState("");
-  const [purchasePriceSetting, setPurchasePriceSetting] = useState("");
-  const [cannedSmsSettings, setCannedSmsSettings] = useState("");
-
   const handleClick = () => {
     // console.log("ok");
-    let obj = {
-      item: item,
-      commodityCode: commodityCode,
-      productName: productName,
-      commodityCategory: commodityCategory,
-      commodityAttributes: commodityAttributes,
-      internationalBarcode: internationalBarcode,
-      price: price,
-      salesPriceSetting: salesPriceSetting,
-      purchasePriceSetting: purchasePriceSetting,
-      cannedSmsSettings: cannedSmsSettings,
-    };
+    const { editingProduct } = props;
+    const newProduct = { ...editingProduct };
 
-    console.log("obj", obj);
+    console.log("obj", newProduct);
 
-    props.handleModal(obj);
+    props.createProductModal(newProduct);
     handleClose();
   };
 
@@ -59,10 +38,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setCommodityCode(e.target.value);
-                }}
+                name="commodityCode"
+                value={props.editingProduct.commodityCode}
+                onChange={props.handleChangeInput}
               />
             </label>
             {/* 目前CommodityCode:{commodityCode} */}
@@ -75,10 +53,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setProductName(e.target.value);
-                }}
+                name="productName"
+                value={props.editingProduct.productName}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -90,10 +67,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setCommodityCategory(e.target.value);
-                }}
+                name="commodityCategory"
+                value={props.editingProduct.commodityCategory}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -105,10 +81,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setCommodityAttributes(e.target.value);
-                }}
+                name="commodityAttributes"
+                value={props.editingProduct.commodityAttributes}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -120,10 +95,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setInternationalBarcode(e.target.value);
-                }}
+                name="internationalBarcode"
+                value={props.editingProduct.internationalBarcode}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -135,10 +109,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setPrice(e.target.value);
-                }}
+                name="price"
+                value={props.editingProduct.price}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -150,8 +123,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => setSalesPriceSetting(e.target.value)}
+                name="salesPriceSetting"
+                value={props.editingProduct.salesPriceSetting}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -163,10 +137,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setPurchasePriceSetting(e.target.value);
-                }}
+                name="purchasePriceSetting"
+                value={props.editingProduct.purchasePriceSetting}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>
@@ -178,10 +151,9 @@ const ModalCreateProduct = (props) => {
                 type="text"
                 className="form-control productCodeInput"
                 id="productCodes"
-                name="productCode"
-                onChange={(e) => {
-                  setCannedSmsSettings(e.target.value);
-                }}
+                name="cannedSmsSettings"
+                value={props.editingProduct.cannedSmsSettings}
+                onChange={props.handleChangeInput}
               />
             </label>
           </div>

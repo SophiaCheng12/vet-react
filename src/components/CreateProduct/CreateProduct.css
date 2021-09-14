@@ -485,6 +485,10 @@ td {
   border: 1px solid #efefef;
 }
 
+.createProductWord {
+  cursor: pointer;
+}
+
 /* media */
 @media screen and (max-width: 1000px) {
   /* .searchContainer {

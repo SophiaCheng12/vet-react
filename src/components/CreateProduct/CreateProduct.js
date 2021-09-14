@@ -97,7 +97,19 @@ class CreateProduct extends React.Component {
   state = {
     productList: [],
     showModal: false,
-    editingProduct: {},
+    editingProduct: {
+      item: "",
+      commodityCode: "",
+      productName: "",
+      commodityCategory: "",
+      commodityAttributes: "",
+      internationalBarcode: "",
+      price: "",
+      salesPriceSetting: "",
+      purchasePriceSetting: "",
+      cannedSmsSettings: "",
+    },
+    isNew: false,
   };
 
   componentDidMount() {
@@ -106,20 +118,45 @@ class CreateProduct extends React.Component {
     });
   }
 
-  setShowModal(isOpen) {
+  setShowModal = (isOpen) => {
     this.setState({
       showModal: isOpen,
     });
-  }
+  };
 
-  handleModal(obj) {
-    console.log("obj2", obj);
+  createProductModal = (newProduct) => {
+    console.log("obj2", newProduct);
 
     this.setState({
-      productList: [...this.state.productList, obj],
-      editingProduct: obj,
+      productList: [...this.state.productList, newProduct],
+      editingProduct: newProduct,
     });
-  }
+  };
+
+  handleChangeInput = (e) => {
+    console.log(e);
+    this.setState({
+      editingProduct: {
+        ...this.state.editingProduct,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
+  replaceEditingProduct = (product) => {
+    this.setState({
+      editingProduct: {
+        //   ...this.state.editingProduct,
+        ...product,
+      },
+    });
+  };
+
+  newEditingProduct = () => {
+    this.setState({
+      editingProduct: {},
+    });
+  };
 
   render() {
     return (
@@ -130,14 +167,19 @@ class CreateProduct extends React.Component {
         </div>
         <ProductMain />
         <ModalCreateProduct
-          handleModal={(obj) => this.handleModal(obj)}
+          createProductModal={this.createProductModal}
           showModal={this.state.showModal}
-          setShowModal={(isOpen) => this.setShowModal(isOpen)}
+          setShowModal={this.setShowModal}
+          editingProduct={this.state.editingProduct}
+          handleChangeInput={this.handleChangeInput}
         />
         <ProductList
           productList={this.state.productList}
           showModal={this.state.showModal}
           setShowModal={(isOpen) => this.setShowModal(isOpen)}
+          // editingProduct={this.state.editingProduct}
+          replaceEditingProduct={this.replaceEditingProduct}
+          newEditingProduct={this.newEditingProduct}
         />
         {/* obj={this.state.} */}
       </div>

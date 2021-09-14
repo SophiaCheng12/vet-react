@@ -1,18 +1,19 @@
 import React from "react";
 
+const INITIAL_PRODUCT_MAIN = {
+  productCode: "",
+  internationalBarCode: "",
+  productName: "",
+  selectValue: "",
+  commodityAttributes: "",
+  productSupplier: "",
+  // productCategory: "",
+  productBrand: "",
+};
+
 class ProductMain extends React.Component {
   state = {
-    state1: "",
-    searchProduct: {
-      productCode: "",
-      internationalBarCode: "",
-      productName: "",
-      selectValue: "",
-      commodityAttributes: "",
-      productSupplier: "",
-      productCategory: "",
-      // productBrand: "",
-    },
+    searchProduct: INITIAL_PRODUCT_MAIN,
     // searchProductSelector:{
     //   selectValue: '',
     // }
@@ -27,18 +28,17 @@ class ProductMain extends React.Component {
 
           [e.target.name]: e.target.value,
           // selectValue: e.target.value,
-          // productBrand: e.target.value,
         },
       };
     });
   };
 
-  // searchProduct:{
-  //          productCode : { [e.target.name] : e.target.value},
-  //     }
-
-  // this.setState({selectValue:e.target.value});
-  //   },
+  clearForm = () => {
+    // console.log("ok");
+    this.setState({
+      searchProduct: INITIAL_PRODUCT_MAIN,
+    });
+  };
 
   render() {
     return (
@@ -198,6 +198,7 @@ class ProductMain extends React.Component {
                   <button
                     type="button"
                     className="btn searchFormBtn clearBtn  mt-3 mr-2"
+                    onClick={this.clearForm}
                   >
                     清除
                   </button>
