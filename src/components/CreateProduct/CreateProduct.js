@@ -133,6 +133,12 @@ class CreateProduct extends React.Component {
     });
   };
 
+  editProductModalSave = (editedNewProduct) => {
+    this.setState({
+      productList: [editedNewProduct],
+    });
+  };
+
   handleChangeInput = (e) => {
     console.log(e);
     this.setState({
@@ -185,6 +191,7 @@ class CreateProduct extends React.Component {
           editingProduct={this.state.editingProduct}
           handleChangeInput={this.handleChangeInput}
           changeModalTitle={this.state.modalMode}
+          editProductModalSave={this.editProductModalSave}
         />
         <ProductList
           productList={this.state.productList}

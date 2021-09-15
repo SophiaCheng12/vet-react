@@ -5,7 +5,7 @@ class ProductList extends React.Component {
     this.props.setShowModal(false);
   };
 
-  onBuildClick = (isNew) => {
+  onBuildClick = () => {
     // console.log(isNew);
     // 打開modal
     this.props.setShowModal(true);
@@ -22,10 +22,6 @@ class ProductList extends React.Component {
     // 更新editingProduct
 
     const selectedProduct = this.props.productList.find((element) => {
-      console.log("element", element);
-      console.log("userId", userId);
-      console.log("elementId", element.id);
-
       return userId === element.id;
     });
 
