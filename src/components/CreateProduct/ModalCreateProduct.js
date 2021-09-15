@@ -25,7 +25,18 @@ const ModalCreateProduct = (props) => {
       const { editingProduct } = props;
       const editedNewProduct = { ...editingProduct };
       console.log(editedNewProduct);
-      props.editProductModalSave(editedNewProduct);
+      // props.editProductModalSave(editedNewProduct);
+      const editedNewProductInput = props.productList.map((item) => {
+        console.log("item", item);
+        if (props.getUserId === item.id) {
+          return { ...editingProduct, editedNewProduct };
+        } else {
+          return item;
+          // console.log("item", item);
+        }
+      });
+
+      props.editProductModalSave(editedNewProductInput);
       handleClose();
     }
   };
@@ -118,7 +129,7 @@ const ModalCreateProduct = (props) => {
             <span className="product test">售價&nbsp;:&nbsp;&nbsp;</span>
             <label htmlFor="productCodes">
               <input
-                type="text"
+                type="number"
                 className="form-control productCodeInput"
                 id="productCodes"
                 name="price"

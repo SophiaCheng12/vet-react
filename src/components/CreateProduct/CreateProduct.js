@@ -110,6 +110,7 @@ class CreateProduct extends React.Component {
       cannedSmsSettings: "",
     },
     modalMode: "create",
+    userId: 0,
   };
 
   componentDidMount() {
@@ -117,6 +118,12 @@ class CreateProduct extends React.Component {
       productList: productList,
     });
   }
+
+  setUserId = (userId) => {
+    this.setState({
+      userId: userId,
+    });
+  };
 
   setShowModal = (isOpen) => {
     this.setState({
@@ -135,7 +142,7 @@ class CreateProduct extends React.Component {
 
   editProductModalSave = (editedNewProduct) => {
     this.setState({
-      productList: [editedNewProduct],
+      productList: [...editedNewProduct],
     });
   };
 
@@ -192,6 +199,8 @@ class CreateProduct extends React.Component {
           handleChangeInput={this.handleChangeInput}
           changeModalTitle={this.state.modalMode}
           editProductModalSave={this.editProductModalSave}
+          productList={this.state.productList}
+          getUserId={this.state.userId}
         />
         <ProductList
           productList={this.state.productList}
@@ -202,6 +211,7 @@ class CreateProduct extends React.Component {
           newEditingProduct={this.newEditingProduct}
           deleteProduct={this.deleteProduct}
           changeModalCondition={this.changeModalCondition}
+          setUserId={this.setUserId}
         />
         {/* obj={this.state.} */}
       </div>

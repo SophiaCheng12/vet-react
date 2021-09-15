@@ -17,6 +17,7 @@ class ProductList extends React.Component {
   onEditClick = (userId) => {
     // 打開modal
     this.props.setShowModal(true);
+    this.props.setUserId(userId);
     this.props.changeModalCondition("edit");
     // console.log(isNew);
     // 更新editingProduct
