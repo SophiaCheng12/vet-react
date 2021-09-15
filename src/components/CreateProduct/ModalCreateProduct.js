@@ -28,7 +28,9 @@ const ModalCreateProduct = (props) => {
 
       <Modal show={props.showModal} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>新增商品</Modal.Title>
+          <Modal.Title>
+            {props.changeModalTitle === "edit" ? "編輯商品" : "新增商品"}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="form-group">
@@ -163,7 +165,9 @@ const ModalCreateProduct = (props) => {
             Close
           </Button>
           <Button variant="primary" onClick={handleClick}>
-            Save Changes
+            {props.changeModalTitle === "edit"
+              ? "Save Changes"
+              : "Create Product"}
           </Button>
           {/* onClick={handleClose} */}
         </Modal.Footer>

@@ -1,43 +1,48 @@
 import React from "react";
 
 class ProductList extends React.Component {
-  state = {
-    isNew: false,
-  };
-
-  // handleShow = (isNew, item) => {
-  //   this.props.setShowModal(true);
-  //   console.log(isNew);
-  // console.log(this.props.obj);
-  // if (isNew === false) {
-  //   this.props.obj = object.assign({}, item);
-  // }
-  // };
-
   handleClose = () => {
     this.props.setShowModal(false);
   };
 
-  onBuildClick = () => {
+  onBuildClick = (isNew) => {
+    // console.log(isNew);
     // 打開modal
     this.props.setShowModal(true);
+    this.props.changeModalCondition("create");
     // 更新editingProduct
     this.props.newEditingProduct();
   };
 
-  onEditClick = (userIndex, e) => {
+  onEditClick = (userId) => {
     // 打開modal
     this.props.setShowModal(true);
+    this.props.changeModalCondition("edit");
+    // console.log(isNew);
     // 更新editingProduct
-    console.log(userIndex);
 
-    this.props.productList.forEach((product, index) => {
-      // console.log("e2", e.target.index);
-      if (userIndex === index) {
-        console.log("product", product);
-        this.props.replaceEditingProduct(product);
-      }
+    const selectedProduct = this.props.productList.find((element) => {
+      console.log("element", element);
+      console.log("userId", userId);
+      console.log("elementId", element.id);
+
+      return userId === element.id;
     });
+
+    this.props.replaceEditingProduct(selectedProduct);
+  };
+
+  // this.props.replaceEditingProduct(product);
+
+  onDelete = (userId) => {
+    console.log("userId", userId);
+
+    const filteredProduct = this.props.productList.filter((product) => {
+      return userId !== product.id;
+    });
+    console.log("filteredProduct", filteredProduct);
+    this.props.deleteProduct(filteredProduct);
+    console.log("filteredProduct2", filteredProduct);
   };
 
   renderProductList(list) {
@@ -54,14 +59,10 @@ class ProductList extends React.Component {
           <td>{item.salesPriceSetting} </td>
           <td>{item.purchasePriceSetting} </td>
           <td>{item.cannedSmsSettings}</td>
-          <td>
-            <img
-              src="./Img/modify.png"
-              alt=""
-              onClick={(e) => this.onEditClick(index, e)}
-            />
+          <td onClick={(e) => this.onEditClick(item.id, e)}>
+            <img src="./Img/modify.png" alt="" />
           </td>
-          <td>
+          <td onClick={(e) => this.onDelete(item.id, e)}>
             <img src="./Img/bin.png" alt="" />
           </td>
         </tr>

@@ -8,9 +8,9 @@ import "./CreateProduct.css";
 
 const productList = [
   {
-    item: 1,
+    id: "eu1",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 1",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -20,9 +20,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu2",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 2",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -32,9 +32,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu3",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 3",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -44,9 +44,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu4",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 4",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -56,9 +56,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu5",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 5",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -68,9 +68,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu6",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 6",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -80,9 +80,9 @@ const productList = [
     cannedSmsSettings: "罐頭簡訊設定",
   },
   {
-    item: 1,
+    id: "eu7",
     commodityCode: 61802,
-    productName: "Dog Bed Gent antibac 80x60 cm",
+    productName: "Dog Bed Gent antibac 80x60 cm 7",
     commodityCategory: "[------- 品牌商品 -------]-Hunter ",
     commodityAttributes: "商品",
     internationalBarcode: "4016739618023",
@@ -109,7 +109,7 @@ class CreateProduct extends React.Component {
       purchasePriceSetting: "",
       cannedSmsSettings: "",
     },
-    isNew: false,
+    modalMode: "create",
   };
 
   componentDidMount() {
@@ -158,6 +158,18 @@ class CreateProduct extends React.Component {
     });
   };
 
+  deleteProduct = (product) => {
+    this.setState({
+      productList: [...product],
+    });
+  };
+
+  changeModalCondition = (condition) => {
+    this.setState({
+      modalMode: condition,
+    });
+  };
+
   render() {
     return (
       <div id="createProduct" className="content">
@@ -172,6 +184,7 @@ class CreateProduct extends React.Component {
           setShowModal={this.setShowModal}
           editingProduct={this.state.editingProduct}
           handleChangeInput={this.handleChangeInput}
+          changeModalTitle={this.state.modalMode}
         />
         <ProductList
           productList={this.state.productList}
@@ -180,6 +193,8 @@ class CreateProduct extends React.Component {
           // editingProduct={this.state.editingProduct}
           replaceEditingProduct={this.replaceEditingProduct}
           newEditingProduct={this.newEditingProduct}
+          deleteProduct={this.deleteProduct}
+          changeModalCondition={this.changeModalCondition}
         />
         {/* obj={this.state.} */}
       </div>
