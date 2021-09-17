@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+// import { queryAllByAttribute } from "@testing-library/dom";
+import React from "react"; //{ useState, useEffect }
 import { Button, Modal } from "react-bootstrap";
 
 const ModalCreateProduct = (props) => {
@@ -7,11 +8,23 @@ const ModalCreateProduct = (props) => {
   // const handleShow = () => setShow(true);
 
   const handleClose = () => props.setShowModal(false);
-  const handleShow = () => props.setShowModal(true);
+  // const handleShow = () => props.setShowModal(true);
+
+  const checkType = () => {
+    if (!props.editingProduct.commodityCode) {
+      return alert("請輸入代碼");
+    } else if (!props.editingProduct.productName) {
+      return alert("請輸入商品名稱");
+    } else if (!props.editingProduct.commodityCategory) {
+      return alert("請輸入商品類別");
+    }
+    return true;
+  };
 
   const handleClick = () => {
     if (props.changeModalTitle === "create") {
-      // console.log("ok");
+      console.log("ok");
+      if (!checkType()) return;
       const { editingProduct } = props;
       const newProduct = { ...editingProduct };
 
@@ -22,6 +35,7 @@ const ModalCreateProduct = (props) => {
     }
     if (props.changeModalTitle === "edit") {
       console.log("ok");
+      if (!checkType()) return;
       const { editingProduct } = props;
       const editedNewProduct = { ...editingProduct };
       console.log(editedNewProduct);
@@ -84,16 +98,22 @@ const ModalCreateProduct = (props) => {
           </div>
 
           <div className="form-group">
-            <span className="product">商品類別&nbsp;:&nbsp;&nbsp;</span>
-            <label htmlFor="productCodes">
-              <input
-                type="text"
-                className="form-control productCodeInput"
+            <span className="product">商品類別&nbsp;:&nbsp;</span>
+            <label htmlFor="exampleFormControlSelect1">
+              <select
+                className="form-control select"
                 id="productCodes"
                 name="commodityCategory"
                 value={props.editingProduct.commodityCategory || ""}
                 onChange={props.handleChangeInput}
-              />
+              >
+                <option value=""></option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
             </label>
           </div>
 

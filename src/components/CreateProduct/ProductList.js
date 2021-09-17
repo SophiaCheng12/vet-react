@@ -151,27 +151,6 @@ class ProductList extends React.Component {
                   </thead>
 
                   <tbody className="createProductTr">
-                    {/* <tr>
-                      <th scope="row">1</th>
-                      <td>61802</td>
-                      <td className="ellipsis">
-                        Dog Bed Gent antibac 80x60 cm
-                      </td>
-                      <td>[------- 品牌商品 -------]-Hunter </td>
-                      <td>商品</td>
-                      <td>4016739618023</td>
-                      <td>2360 </td>
-                      <td>銷售價格維護 </td>
-                      <td>採購價格維護 </td>
-                      <td>罐頭簡訊維護 </td>
-                      <td>
-                        <img src="./Img/modify.png" alt="" />
-                      </td>
-                      <td>
-                        <img src="./Img/bin.png" alt="" />
-                      </td>
-                    </tr> */}
-
                     {this.renderProductList(productList)}
                   </tbody>
                 </table>

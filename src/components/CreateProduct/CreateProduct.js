@@ -5,6 +5,7 @@ import ProductMain from "./ProductMain.js";
 import ProductList from "./ProductList.js";
 import ModalCreateProduct from "./ModalCreateProduct.js";
 import "./CreateProduct.css";
+import qs from "qs";
 
 const productList = [
   {
@@ -93,6 +94,17 @@ const productList = [
   },
 ];
 
+// const INITIAL_PRODUCT_MAIN = {
+//   productCode: "",
+//   internationalBarCode: "",
+//   productName: "",
+//   selectValue: "",
+//   commodityAttributes: "",
+//   productSupplier: "",
+//   // productCategory: "",
+//   productBrand: "",
+// };
+
 class CreateProduct extends React.Component {
   state = {
     productList: [],
@@ -109,6 +121,8 @@ class CreateProduct extends React.Component {
       purchasePriceSetting: "",
       cannedSmsSettings: "",
     },
+    // INITIAL_PRODUCT_MAIN,
+    searchProduct: {},
     modalMode: "create",
     userId: 0,
   };
@@ -117,7 +131,46 @@ class CreateProduct extends React.Component {
     this.setState({
       productList: productList,
     });
+
+    const queryStringData = qs.parse(this.props.location.search, {
+      ignoreQueryPrefix: true,
+    });
+
+    this.setState({
+      searchProduct: {
+        ...queryStringData,
+      },
+    });
   }
+
+  handleChange = (e) => {
+    this.setState({
+      // console.log('preState', ...preState.searchProduct)
+
+      searchProduct: {
+        ...this.state.searchProduct,
+
+        [e.target.name]: e.target.value,
+        // selectValue: e.target.value,
+      },
+    });
+  };
+
+  clearForm = () => {
+    // console.log("ok");
+    this.setState({
+      searchProduct: {
+        productCode: "",
+        internationalBarCode: "",
+        productName: "",
+        selectValue: "",
+        commodityAttributes: "",
+        productSupplier: "",
+        // productCategory: "",
+        productBrand: "",
+      },
+    });
+  };
 
   setUserId = (userId) => {
     this.setState({
@@ -156,6 +209,17 @@ class CreateProduct extends React.Component {
     });
   };
 
+  //把物件變成query string
+  searchProductFunction = () => {
+    console.log(this.state.searchProduct);
+    const searchParams = new URLSearchParams({
+      page: 1,
+      ...this.state.searchProduct,
+    });
+    console.log(searchParams.toString());
+    this.props.history.push(`?${searchParams.toString()}`);
+  };
+
   replaceEditingProduct = (product) => {
     this.setState({
       editingProduct: {
@@ -184,13 +248,19 @@ class CreateProduct extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     return (
       <div id="createProduct" className="content">
         <div className="nav">
           <ProductNavbar />
           <ProductNavList />
         </div>
-        <ProductMain />
+        <ProductMain
+          searchProduct={this.state.searchProduct}
+          handleChange={this.handleChange}
+          clearForm={this.clearForm}
+          searchProductFunction={this.searchProductFunction}
+        />
         <ModalCreateProduct
           createProductModal={this.createProductModal}
           showModal={this.state.showModal}
@@ -201,6 +271,7 @@ class CreateProduct extends React.Component {
           editProductModalSave={this.editProductModalSave}
           productList={this.state.productList}
           getUserId={this.state.userId}
+          searchProduct={this.state.searchProduct}
         />
         <ProductList
           productList={this.state.productList}

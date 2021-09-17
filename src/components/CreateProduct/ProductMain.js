@@ -1,43 +1,20 @@
 import React from "react";
 
-const INITIAL_PRODUCT_MAIN = {
-  productCode: "",
-  internationalBarCode: "",
-  productName: "",
-  selectValue: "",
-  commodityAttributes: "",
-  productSupplier: "",
-  // productCategory: "",
-  productBrand: "",
-};
-
 class ProductMain extends React.Component {
-  state = {
-    searchProduct: INITIAL_PRODUCT_MAIN,
-    // searchProductSelector:{
-    //   selectValue: '',
-    // }
+  checkType = () => {
+    if (!this.props.searchProduct.productCode) {
+      return alert("請輸入代碼");
+    } else if (!this.props.searchProduct.internationalBarCode) {
+      return alert("請輸入國際條碼");
+    } else if (!this.props.searchProduct.productName) {
+      return alert("請輸入商品名稱");
+    }
+    return true;
   };
 
-  handleChange = (e) => {
-    this.setState((preState) => {
-      // console.log('preState', ...preState.searchProduct)
-      return {
-        searchProduct: {
-          ...preState.searchProduct,
-
-          [e.target.name]: e.target.value,
-          // selectValue: e.target.value,
-        },
-      };
-    });
-  };
-
-  clearForm = () => {
-    // console.log("ok");
-    this.setState({
-      searchProduct: INITIAL_PRODUCT_MAIN,
-    });
+  submitForm = () => {
+    if (!this.checkType()) return;
+    console.log("ok");
   };
 
   render() {
@@ -59,8 +36,8 @@ class ProductMain extends React.Component {
                       className="form-control productCodeInput"
                       id="productCodes"
                       name="productCode"
-                      value={this.state.searchProduct.productCode}
-                      onChange={this.handleChange}
+                      value={this.props.searchProduct.productCode || ""}
+                      onChange={this.props.handleChange}
                     />
                   </label>
                 </div>
@@ -74,8 +51,10 @@ class ProductMain extends React.Component {
                       className="form-control"
                       id="exampleInputPassword1"
                       name="internationalBarCode"
-                      value={this.state.searchProduct.internationalBarCode}
-                      onChange={this.handleChange}
+                      value={
+                        this.props.searchProduct.internationalBarCode || ""
+                      }
+                      onChange={this.props.handleChange}
                     />
                   </label>
                 </div>
@@ -89,21 +68,23 @@ class ProductMain extends React.Component {
                       className="form-control"
                       id="exampleInputPassword1"
                       name="productName"
-                      value={this.state.searchProduct.productName}
-                      onChange={this.handleChange}
+                      value={this.props.searchProduct.productName || ""}
+                      onChange={this.props.handleChange}
                     />
                   </label>
                 </div>
+
                 <div className="form-group">
                   <span className="product">商品類別&nbsp;:&nbsp;</span>
                   <label htmlFor="exampleFormControlSelect1">
                     <select
                       className="form-control select"
                       id="exampleFormControlSelect1"
-                      value={this.state.searchProduct.selectValue}
-                      onChange={this.handleChange}
+                      value={this.props.searchProduct.selectValue || ""}
+                      onChange={this.props.handleChange}
                       name="selectValue"
                     >
+                      <option value="">--Please choose an option--</option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -123,8 +104,10 @@ class ProductMain extends React.Component {
                         type="text"
                         className="form-control commodityAttributesInput"
                         id="exampleInputPassword1"
-                        value={this.state.searchProduct.commodityAttributes}
-                        onChange={this.handleChange}
+                        value={
+                          this.props.searchProduct.commodityAttributes || ""
+                        }
+                        onChange={this.props.handleChange}
                         name="commodityAttributes"
                       />
                     </label>
@@ -150,8 +133,8 @@ class ProductMain extends React.Component {
                         type="text"
                         className="form-control productSupplier"
                         id="exampleInputPassword1"
-                        value={this.state.searchProduct.productSupplier}
-                        onChange={this.handleChange}
+                        value={this.props.searchProduct.productSupplier || ""}
+                        onChange={this.props.handleChange}
                         name="productSupplier"
                       />
                     </label>
@@ -175,10 +158,11 @@ class ProductMain extends React.Component {
                     <select
                       className="form-control select productBrand"
                       id="exampleFormControlSelect2"
-                      value={this.state.searchProduct.productBrand}
-                      onChange={this.handleChange}
+                      value={this.props.searchProduct.productBrand || ""}
+                      onChange={this.props.handleChange}
                       name="productBrand"
                     >
+                      <option value="">--Please choose an option--</option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
@@ -192,19 +176,21 @@ class ProductMain extends React.Component {
                   <button
                     type="button"
                     className="btn searchFormBtn searchBtn buttonActive mt-3 mr-2"
+                    onClick={this.props.searchProductFunction}
                   >
                     搜尋
                   </button>
                   <button
                     type="button"
                     className="btn searchFormBtn clearBtn  mt-3 mr-2"
-                    onClick={this.clearForm}
+                    onClick={this.props.clearForm}
                   >
                     清除
                   </button>
                   <button
                     type="button"
                     className="btn searchFormBtn submitBtn mt-3 mr-2"
+                    onClick={this.submitForm}
                   >
                     匯出表格
                   </button>

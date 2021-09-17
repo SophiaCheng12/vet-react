@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ProductNavList extends React.Component {
   state = {
@@ -24,9 +25,9 @@ class ProductNavList extends React.Component {
       <div className="navList">
         <nav className="navbar navbar1 navbar-expand-lg navbar-light">
           {/* active */}
-          <a className="navbar-brand navbarTitle pos active" href="#">
+          <Link className="navbar-brand navbarTitle pos active" to="">
             POS前台
-          </a>
+          </Link>
           {/* onClick={this.active} */}
           <button
             className="navbar-toggler navbarToggler"
@@ -51,9 +52,9 @@ class ProductNavList extends React.Component {
               {this.state.functionLists.map((item, index) => {
                 return (
                   <li className="nav-item" key={index}>
-                    <a className="nav-link navItemColor" href="#">
+                    <Link className="nav-link navItemColor" to="">
                       <span className="navItemColor"> {item} </span>
-                    </a>
+                    </Link>
                   </li>
                 );
               })}
