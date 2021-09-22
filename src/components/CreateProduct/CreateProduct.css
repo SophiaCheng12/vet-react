@@ -890,3 +890,13 @@ td {
     margin-left: 0rem;
   }
 }
+
+.testPagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.paginationActive {
+  background-color: lightblue;
+}

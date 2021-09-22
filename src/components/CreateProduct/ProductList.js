@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class ProductList extends React.Component {
   handleClose = () => {
@@ -67,8 +68,149 @@ class ProductList extends React.Component {
     });
   }
 
+  // pages
+  renderPagesList() {
+    const currentPage = this.props.currentPage;
+    const totalPage = 8;
+    const baseNumber = 1;
+
+    const left = currentPage - 2;
+    const right = currentPage + 2;
+
+    // console.log("currentPage", this.props.currentPage);
+    // console.log("productPages", this.props.productPages);
+
+    if (left < baseNumber) {
+      if (left === 0) {
+        // console.log("left", left);
+        const leftNumber = baseNumber - left;
+        console.log("leftNumber", leftNumber);
+        let pagesArray = [0, 1, 2, 3, 4];
+        console.log("pages", pagesArray.splice(0, leftNumber));
+        console.log(pagesArray);
+        const pages = pagesArray;
+        console.log("pages", pages);
+        return pages.map((page, index) => {
+          const paginationActive =
+            this.props.currentPage === page ? "paginationActive" : "";
+          return (
+            <li className="page-item" key={index}>
+              <Link
+                className={`page-link ${paginationActive}`}
+                to="#"
+                onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+              >
+                {page}
+              </Link>
+            </li>
+          );
+        });
+      } else {
+        let pagesArray = [-1, 0, 1, 2, 3];
+        const leftNumber = baseNumber - left;
+        console.log("pages", pagesArray.splice(0, leftNumber));
+        console.log(pagesArray);
+        const pages = pagesArray;
+        console.log("pages", pages);
+        return pages.map((page, index) => {
+          const paginationActive =
+            this.props.currentPage === page ? "paginationActive" : "";
+          return (
+            <li className="page-item" key={index}>
+              <Link
+                className={`page-link ${paginationActive}`}
+                to="#"
+                onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+              >
+                {page}
+              </Link>
+            </li>
+          );
+        });
+      }
+    }
+
+    if (left >= baseNumber && currentPage < 7) {
+      console.log("middle");
+      let pagesArray = [1, 2, 3, 4, 5, 6];
+      // const pages = pagesArray;
+      return pagesArray.map((N) => {
+        console.log("N", N);
+        console.log("this.currentPage", this.props.currentPage);
+
+        if (currentPage === N) {
+          // console.log(N);
+          // console.log((pagesArray = [N - 2, N - 1, N, N + 1, N + 2]));
+          pagesArray = [N - 2, N - 1, N, N + 1, N + 2];
+          // return (pagesArray = [N - 2, N - 1, N, N + 1, N + 2]);
+          const pages = pagesArray;
+          return pages.map((page, index) => {
+            const paginationActive =
+              this.props.currentPage === page ? "paginationActive" : "";
+            return (
+              <li className="page-item" key={index}>
+                <Link
+                  className={`page-link ${paginationActive}`}
+                  to="#"
+                  onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+                >
+                  {page}
+                </Link>
+              </li>
+            );
+          });
+        }
+      });
+    }
+
+    if (right > totalPage) {
+      console.log("right");
+
+      const rightNumber = right - totalPage;
+      console.log(rightNumber);
+      let pagesArray = [4, 5, 6, 7, 8];
+      pagesArray.splice(0, rightNumber);
+      console.log(pagesArray);
+      const pages = pagesArray;
+      console.log("pages", pages);
+      return pages.map((page, index) => {
+        const paginationActive =
+          this.props.currentPage === page ? "paginationActive" : "";
+        return (
+          <li className="page-item" key={index}>
+            <Link
+              className={`page-link ${paginationActive}`}
+              to="#"
+              onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+            >
+              {page}
+            </Link>
+          </li>
+        );
+      });
+    }
+  }
+
+  // onPreviousPage = () => {
+  //   console.log("ok");
+  // };
+
+  // onNextPage = () => {
+  //   console.log("ok2");
+  // };
+
+  componentDidMount() {
+    this.renderPagesList();
+  }
+
   render() {
     const { productList } = this.props;
+    // const { productPages } = this.props;
+    const nextDisabled =
+      this.props.totalPage === this.props.currentPage ? "disabled" : "";
+
+    const previousDisabled = this.props.currentPage === 1 ? "disabled" : "";
+
     return (
       <div>
         {/* createProduct */}
@@ -212,6 +354,59 @@ class ProductList extends React.Component {
           </div>
         </div>
         {/* <!--  bottomPagination結束在這裡--> */}
+
+        {/* testPagination */}
+        <nav aria-label="Page navigation example" className="testPagination">
+          <ul className="pagination">
+            <li className={`page-item ${previousDisabled}`}>
+              <Link
+                className="page-link"
+                to="#"
+                onClick={this.props.onPreviousPage}
+              >
+                Previous
+              </Link>
+            </li>
+            {/* productPages */}
+            {this.renderPagesList()}
+            {/* <li className="page-item">
+              <Link
+                className="page-link"
+                to="#"
+                onClick={this.props.onCurrentPage}
+              >
+                1
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                className="page-link"
+                to="#"
+                onClick={this.props.onCurrentPage}
+              >
+                2
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                className="page-link"
+                to="#"
+                onClick={this.props.onCurrentPage}
+              >
+                3
+              </Link>
+            </li> */}
+            <li className={`page-item ${nextDisabled}`}>
+              <Link
+                className="page-link"
+                to="#"
+                onClick={this.props.onNextPage}
+              >
+                Next
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     );
   }

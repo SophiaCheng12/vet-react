@@ -6,6 +6,8 @@ import ProductList from "./ProductList.js";
 import ModalCreateProduct from "./ModalCreateProduct.js";
 import "./CreateProduct.css";
 import qs from "qs";
+import _ from "lodash";
+// import { Link } from "react-router-dom";
 
 const productList = [
   {
@@ -105,6 +107,8 @@ const productList = [
 //   productBrand: "",
 // };
 
+const productPages = [1, 2, 3, 4, 5, 6, 7, 8];
+
 class CreateProduct extends React.Component {
   state = {
     productList: [],
@@ -122,15 +126,22 @@ class CreateProduct extends React.Component {
       cannedSmsSettings: "",
     },
     // INITIAL_PRODUCT_MAIN,
-    searchProduct: {},
+    searchProduct: {
+      // page: 3,
+    },
     modalMode: "create",
     userId: 0,
+    currentPage: 1,
+    previousPage: 0,
+    nextPage: 0,
+    totalPage: 8,
+    productPages: [],
+    paginationActive: 0,
+    // activePage: 0,
   };
 
   componentDidMount() {
-    this.setState({
-      productList: productList,
-    });
+    this.fetchProducts();
 
     const queryStringData = qs.parse(this.props.location.search, {
       ignoreQueryPrefix: true,
@@ -142,6 +153,14 @@ class CreateProduct extends React.Component {
       },
     });
   }
+
+  fetchProducts = () => {
+    console.log(this.state.searchProduct);
+    this.setState({
+      productList: productList,
+      productPages: productPages,
+    });
+  };
 
   handleChange = (e) => {
     this.setState({
@@ -211,13 +230,22 @@ class CreateProduct extends React.Component {
 
   //把物件變成query string
   searchProductFunction = () => {
-    console.log(this.state.searchProduct);
+    // console.log(this.state.searchProduct);
+    // const newProduct =
     const searchParams = new URLSearchParams({
-      page: 1,
-      ...this.state.searchProduct,
+      //  page: 1,
+      // ...this.state.searchProduct,
+
+      ..._.omit(this.state.searchProduct, ["page"]),
     });
+
     console.log(searchParams.toString());
     this.props.history.push(`?${searchParams.toString()}`);
+    this.setState({
+      currentPage: 1,
+      searchProduct: _.omit(this.state.searchProduct, ["page"]),
+    });
+    console.log(searchParams);
   };
 
   replaceEditingProduct = (product) => {
@@ -247,8 +275,51 @@ class CreateProduct extends React.Component {
     });
   };
 
+  onPreviousPage = () => {
+    // console.log("ok");
+
+    console.log("ok");
+    if (this.state.currentPage < 1) return;
+    else {
+      this.setState({
+        // previousPage: this.state.currentPage - 1,
+        currentPage: this.state.currentPage - 1,
+      });
+    }
+  };
+
+  onNextPage = () => {
+    console.log("ok2");
+
+    this.setState({
+      // nextPage: this.state.currentPage + 1,
+      currentPage: this.state.currentPage + 1,
+    });
+
+    // console.log(this.state.previousPage);
+    // console.log(this.state.currentPage);
+    // console.log(this.state.nextPage);
+  };
+
+  onCurrentPageMethod = (page, e) => {
+    console.log("page", page);
+    console.log("e", e);
+    const activePage = this.state.productPages.find((item) => {
+      return item === page;
+    });
+
+    console.log("activePage", activePage);
+
+    this.setState({
+      // currentPage: this.state.currentPage,
+      currentPage: activePage,
+      // paginationActive: activePage,
+      // paginationActive: page,
+    });
+  };
+
   render() {
-    console.log(this.props);
+    console.log(this.props); //可看到history、location、match等的資訊
     return (
       <div id="createProduct" className="content">
         <div className="nav">
@@ -283,6 +354,13 @@ class CreateProduct extends React.Component {
           deleteProduct={this.deleteProduct}
           changeModalCondition={this.changeModalCondition}
           setUserId={this.setUserId}
+          onPreviousPage={this.onPreviousPage}
+          onNextPage={this.onNextPage}
+          currentPage={this.state.currentPage}
+          totalPage={this.state.totalPage}
+          productPages={this.state.productPages}
+          onCurrentPageMethod={this.onCurrentPageMethod}
+          paginationActive={this.state.paginationActive}
         />
         {/* obj={this.state.} */}
       </div>
