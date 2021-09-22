@@ -303,7 +303,7 @@ class CreateProduct extends React.Component {
 
   onCurrentPageMethod = (page, e) => {
     console.log("page", page);
-    console.log("e", e);
+
     const activePage = this.state.productPages.find((item) => {
       return item === page;
     });

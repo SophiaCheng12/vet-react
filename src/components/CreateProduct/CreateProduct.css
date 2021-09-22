@@ -898,5 +898,8 @@ td {
 }
 
 .paginationActive {
-  background-color: lightblue;
+  background-color: lightblue !important;
+  outline: none !important;
+  border-color: #ccc !important;
+  box-shadow: none !important;
 }
