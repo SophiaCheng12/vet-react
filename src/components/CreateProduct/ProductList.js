@@ -70,7 +70,7 @@ class ProductList extends React.Component {
 
   // pages
   renderPagesList() {
-    const currentPage = this.props.currentPage;
+    const currentPage = this.props.currentPage || 1;
     const totalPage = 8;
     const baseNumber = 1;
 
@@ -94,12 +94,13 @@ class ProductList extends React.Component {
           const paginationActive =
             this.props.currentPage === page ? "paginationActive" : "";
           return (
-            <li className="page-item" key={index}>
-              <Link
-                className={`page-link ${paginationActive}`}
-                to="#"
-                onClick={(e) => this.props.onCurrentPageMethod(page, e)}
-              >
+            <li
+              className="page-item"
+              key={index}
+              data-page={page}
+              onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+            >
+              <Link className={`page-link ${paginationActive}`} to="#">
                 {page}
               </Link>
             </li>
@@ -109,19 +110,21 @@ class ProductList extends React.Component {
         let pagesArray = [-1, 0, 1, 2, 3];
         const leftNumber = baseNumber - left;
         console.log("pages", pagesArray.splice(0, leftNumber));
-        console.log(pagesArray);
+        // pagesArray.splice(0, leftNumber);
+        // console.log(pagesArray);
         const pages = pagesArray;
-        console.log("pages", pages);
+        // console.log("pages", pages);
         return pages.map((page, index) => {
           const paginationActive =
             this.props.currentPage === page ? "paginationActive" : "";
           return (
-            <li className="page-item" key={index}>
-              <Link
-                className={`page-link ${paginationActive}`}
-                to="#"
-                onClick={(e) => this.props.onCurrentPageMethod(page, e)}
-              >
+            <li
+              className="page-item"
+              key={index}
+              data-page={page}
+              onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+            >
+              <Link className={`page-link ${paginationActive}`} to="#">
                 {page}
               </Link>
             </li>
@@ -131,13 +134,9 @@ class ProductList extends React.Component {
     }
 
     if (left >= baseNumber && currentPage < 7) {
-      console.log("middle");
       let pagesArray = [1, 2, 3, 4, 5, 6];
-      // const pages = pagesArray;
-      return pagesArray.map((N) => {
-        console.log("N", N);
-        console.log("this.currentPage", this.props.currentPage);
 
+      return pagesArray.map((N) => {
         if (currentPage === N) {
           // console.log(N);
           // console.log((pagesArray = [N - 2, N - 1, N, N + 1, N + 2]));
@@ -148,41 +147,42 @@ class ProductList extends React.Component {
             const paginationActive =
               this.props.currentPage === page ? "paginationActive" : "";
             return (
-              <li className="page-item" key={index}>
-                <Link
-                  className={`page-link ${paginationActive}`}
-                  to="#"
-                  onClick={(e) => this.props.onCurrentPageMethod(page, e)}
-                >
+              <li
+                className="page-item"
+                key={index}
+                data-page={page}
+                onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+              >
+                <Link className={`page-link ${paginationActive}`} to="#">
                   {page}
                 </Link>
               </li>
             );
           });
         }
+        return null;
       });
     }
 
     if (right > totalPage) {
-      console.log("right");
-
       const rightNumber = right - totalPage;
       console.log(rightNumber);
       let pagesArray = [4, 5, 6, 7, 8];
       pagesArray.splice(0, rightNumber);
       console.log(pagesArray);
       const pages = pagesArray;
-      console.log("pages", pages);
+
       return pages.map((page, index) => {
         const paginationActive =
           this.props.currentPage === page ? "paginationActive" : "";
         return (
-          <li className="page-item" key={index}>
-            <Link
-              className={`page-link ${paginationActive}`}
-              to="#"
-              onClick={(e) => this.props.onCurrentPageMethod(page, e)}
-            >
+          <li
+            className="page-item"
+            key={index}
+            data-page={page}
+            onClick={(e) => this.props.onCurrentPageMethod(page, e)}
+          >
+            <Link className={`page-link ${paginationActive}`} to="#">
               {page}
             </Link>
           </li>
@@ -190,14 +190,6 @@ class ProductList extends React.Component {
       });
     }
   }
-
-  // onPreviousPage = () => {
-  //   console.log("ok");
-  // };
-
-  // onNextPage = () => {
-  //   console.log("ok2");
-  // };
 
   componentDidMount() {
     this.renderPagesList();
@@ -216,7 +208,8 @@ class ProductList extends React.Component {
         {/* createProduct */}
         <div className="createProduct">
           <div className="firstPart">
-            <div className="createProductTitle d-flex flex-row">
+            <div className="createProductTitle">
+              {/* <div className="createProductTitle d-flex flex-row"> */}
               <div>
                 <img src="./Img/Vector3.png" alt="" />
               </div>
@@ -243,7 +236,7 @@ class ProductList extends React.Component {
             <div></div>
             <div></div>
             <div></div>
-            <div className="pagination">
+            <div className="pagination  topPagination">
               <div className="firstPaginationImg d-flex flex-row">
                 <div>
                   <img src="./Img/doubleLeftArrow.png" alt="" />
@@ -254,7 +247,7 @@ class ProductList extends React.Component {
                 </div>
               </div>
 
-              <div className="paginationWord d-flex flex-row">
+              <div className="paginationWord  paginationWord2     d-flex flex-row">
                 <p>總共2000筆 第1頁 - 共100頁</p>
               </div>
 

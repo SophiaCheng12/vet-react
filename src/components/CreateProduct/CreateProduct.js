@@ -7,6 +7,7 @@ import ModalCreateProduct from "./ModalCreateProduct.js";
 import "./CreateProduct.css";
 import qs from "qs";
 import _ from "lodash";
+// import styles from "./Button.module.css";
 // import { Link } from "react-router-dom";
 
 const productList = [
@@ -137,7 +138,9 @@ class CreateProduct extends React.Component {
     totalPage: 8,
     productPages: [],
     paginationActive: 0,
-    // activePage: 0,
+    active: 0,
+    savedSearchData: {},
+    // prePage: 0,
   };
 
   componentDidMount() {
@@ -146,11 +149,29 @@ class CreateProduct extends React.Component {
     const queryStringData = qs.parse(this.props.location.search, {
       ignoreQueryPrefix: true,
     });
+    console.log("queryStringData", queryStringData);
 
     this.setState({
       searchProduct: {
         ...queryStringData,
       },
+      savedSearchData: {
+        ...queryStringData,
+      },
+    });
+    console.log("savedSearchData", this.state.savedSearchData);
+
+    let queryStringPage = qs.parse(this.props.location.search, {
+      ignoreQueryPrefix: true,
+    });
+    // console.log("queryStringPage", queryStringPage);
+    queryStringPage = Number(queryStringPage.page);
+    // console.log(queryStringPage);
+
+    this.setState({
+      currentPage: queryStringPage,
+
+      // prePage: queryStringPage,
     });
   }
 
@@ -177,6 +198,7 @@ class CreateProduct extends React.Component {
 
   clearForm = () => {
     // console.log("ok");
+    this.props.history.push("");
     this.setState({
       searchProduct: {
         productCode: "",
@@ -230,20 +252,30 @@ class CreateProduct extends React.Component {
 
   //把物件變成query string
   searchProductFunction = () => {
-    // console.log(this.state.searchProduct);
-    // const newProduct =
+    // this.setState({
+    //   savedSearchData: {
+    //     ..._.omit(this.state.searchProduct, ["page"]),
+    //   },
+    // });
+    const currentPageObj =
+      this.state.currentPage && this.state.currentPage !== 1
+        ? { page: this.state.currentPage }
+        : {};
+
     const searchParams = new URLSearchParams({
       //  page: 1,
       // ...this.state.searchProduct,
-
+      // ..._.omit(this.state.searchProduct, ["page"]),
       ..._.omit(this.state.searchProduct, ["page"]),
+      ...currentPageObj,
     });
 
-    console.log(searchParams.toString());
+    console.log("searchParams", searchParams.toString());
     this.props.history.push(`?${searchParams.toString()}`);
     this.setState({
       currentPage: 1,
-      searchProduct: _.omit(this.state.searchProduct, ["page"]),
+      // searchProduct: _.omit(this.state.searchProduct, ["page"]),
+      savedSearchData: { ...this.state.searchProduct },
     });
     console.log(searchParams);
   };
@@ -295,26 +327,28 @@ class CreateProduct extends React.Component {
       // nextPage: this.state.currentPage + 1,
       currentPage: this.state.currentPage + 1,
     });
-
-    // console.log(this.state.previousPage);
-    // console.log(this.state.currentPage);
-    // console.log(this.state.nextPage);
   };
 
   onCurrentPageMethod = (page, e) => {
-    console.log("page", page);
+    const newCurrentPage = Number(e.currentTarget.dataset.page);
+    let savedSearchData = { ...this.state.savedSearchData };
 
-    const activePage = this.state.productPages.find((item) => {
-      return item === page;
+    console.log("savedSearchData2", savedSearchData);
+    console.log(
+      "savedSearchDataWithoutPage",
+      _.omit(savedSearchData, ["page"])
+    );
+    const pageParams = new URLSearchParams({
+      page: newCurrentPage,
+      // page: this.state.currentPage,
+      ..._.omit(savedSearchData, ["page"]),
     });
-
-    console.log("activePage", activePage);
-
+    console.log("pageParams", pageParams);
+    console.log("pageParams", pageParams.toString());
+    this.props.history.push(`?${pageParams.toString()}`);
     this.setState({
-      // currentPage: this.state.currentPage,
-      currentPage: activePage,
-      // paginationActive: activePage,
-      // paginationActive: page,
+      currentPage: newCurrentPage,
+      searchProduct: savedSearchData,
     });
   };
 

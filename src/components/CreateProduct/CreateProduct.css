@@ -1,5 +1,5 @@
 /* css reset */
-* {
+/* * {
   box-sizing: border-box;
   font-family: "Roboto";
 }
@@ -92,7 +92,7 @@ video {
   vertical-align: baseline;
 }
 /* / HTML5 display-role reset for older browsers */
-article,
+/* article,
 aside,
 details,
 figcaption,
@@ -130,19 +130,21 @@ table {
 img {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* dr.vet */
 
 /* nav */
+/* #createProduct
 .content {
   width: 100%;
   max-width: 95.63rem;
-}
+} */
 
-.nav {
+#createProduct .nav {
   height: 13.85rem;
-  border-bottom: 23px solid #e5e5e5;
+  border-bottom: 23px solid #e5e5e5 !important;
+  /* border: 1px solid red; */
 }
 
 .brand {
@@ -152,7 +154,7 @@ img {
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
 }
 
-.navbarBrand {
+#createProduct .navbarBrand {
   margin: 0 auto;
 }
 
@@ -190,7 +192,7 @@ img {
   white-space: nowrap;
 }
 
-.navList {
+#createProduct .navList {
   width: 100%;
   height: 5.45rem;
   margin-top: 0;
@@ -270,14 +272,14 @@ img {
   /* text-align: center; */
 }
 
-.form-group {
+#createProduct .form-group {
   margin-bottom: 1rem;
   text-align: center;
   justify-content: center;
 }
 
-input[type="text"],
-input[type="number"] {
+#createProduct input[type="text"],
+#createProduct input[type="number"] {
   /* background:pink; */
   width: 18.43rem;
   height: 1.56rem;
@@ -295,7 +297,7 @@ select::-ms-expand {
   display: none;
 }
 
-.select {
+#createProduct .select {
   border-color: lightgray;
   border-radius: 0rem;
   font-size: 0.5rem;
@@ -412,27 +414,42 @@ button {
 }
 
 /* createProduct */
-.createProduct {
-  /* border:1px solid red; */
+#createProduct .createProduct {
+  /* border: 1px solid red; */
   margin-bottom: 4.93rem;
+  width: 100%;
+  max-width: 95.63rem;
 }
 
-.firstPart {
+#createProduct .pagination {
+  /* border: 1px solid red; */
+  display: flex;
+  /* padding-left: 0;
+  list-style: none; */
+}
+
+#createProduct .firstPart {
   margin-bottom: 0.36rem;
   display: flex;
   justify-content: space-around;
 }
 
-.createProductWord {
+#createProduct .topPagination {
+  display: flex;
+  align-items: end;
+}
+
+#createProduct .createProductWord {
   color: #f2af44;
   font-weight: 900;
   font-size: 1.25rem;
   margin-left: 0.36rem;
-  align-items: center;
+  /* align-items: center; */
+  margin-top: 0.2rem;
 }
 
-.firstPaginationImg {
-  border: 1px solid black;
+#createProduct .firstPaginationImg {
+  /* border: 1px solid black; */
   background-color: #3e414f;
   width: 2.37rem;
   height: 1.31rem;
@@ -440,16 +457,22 @@ button {
   justify-content: space-evenly;
 }
 
-.paginationWord {
+#createProduct .paginationWord {
   color: #3e414f;
   font-size: 0.85rem;
   font-weight: 600;
-  align-items: center;
+  /* align-items: center; */
+  padding-top: 0.3rem;
   margin: 0 0.43rem;
 }
 
-.secondPaginationImg {
-  border: 1px solid black;
+#createProduct .paginationWord2 {
+  /* border: 1px solid red; */
+  height: 1.3rem;
+}
+
+#createProduct .secondPaginationImg {
+  /* border: 1px solid black; */
   background-color: #3e414f;
   width: 2.37rem;
   height: 1.31rem;
@@ -457,20 +480,20 @@ button {
   justify-content: space-evenly;
 }
 
-.createProductTr {
+#createProduct .createProductTr {
   text-align: center;
 }
 
-.secondPart .table {
+#createProduct .secondPart .table {
   width: 90.75rem;
   margin: 0 auto;
 }
 
-.bottomPagination {
+#createProduct .bottomPagination {
   margin-top: 0.56rem;
 }
 
-.bottomPaginationTitle {
+#createProduct .bottomPaginationTitle {
   opacity: 0;
 }
 
@@ -485,7 +508,15 @@ td {
   border: 1px solid #efefef;
 }
 
-.createProductWord {
+#createProduct .createProductTitle {
+  /* border: 1px solid red; */
+  display: flex;
+  padding-top: 2rem;
+  border-bottom: 0px;
+  /* margin-bottom: -5rem; */
+}
+
+#createProduct .createProductWord {
   cursor: pointer;
 }
 
@@ -850,15 +881,17 @@ td {
 }
 
 @media screen and (max-width: 24rem) {
-  /* .searchContainer {
-    border: 1px solid orange;
-  } */
+  .searchContainer {
+    width: 100%;
+    /* border: 1px solid orange; */
+  }
   .product {
     font-size: 0.9rem;
   }
 
   #productSupplierId {
     margin-right: -0.1rem;
+    margin-left: 0rem;
   }
 
   #productBrandId {
@@ -879,15 +912,15 @@ td {
   }
 
   .commodityAttributesInput {
-    width: 11.7rem !important;
+    width: 10.7rem !important;
   }
 
   .productSupplier {
-    width: 11.7rem !important;
+    width: 10.7rem !important;
   }
 
   #productBrandId {
-    margin-left: 0rem;
+    margin-left: 0.1rem;
   }
 }
 
