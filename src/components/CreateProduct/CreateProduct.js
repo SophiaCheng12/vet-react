@@ -7,7 +7,7 @@ import ModalCreateProduct from "./ModalCreateProduct.js";
 import "./CreateProduct.css";
 import qs from "qs";
 import _ from "lodash";
-// import styles from "./Button.module.css";
+
 // import { Link } from "react-router-dom";
 
 const productList = [

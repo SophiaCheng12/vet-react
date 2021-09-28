@@ -135,11 +135,10 @@ img {
 /* dr.vet */
 
 /* nav */
-/* #createProduct
-.content {
-  width: 100%;
-  max-width: 95.63rem;
-} */
+#createProduct .content {
+  /* width: 100%; */
+  max-width: 1500px;
+}
 
 #createProduct .nav {
   height: 13.85rem;
@@ -418,7 +417,8 @@ button {
   /* border: 1px solid red; */
   margin-bottom: 4.93rem;
   width: 100%;
-  max-width: 95.63rem;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 #createProduct .pagination {

@@ -1,4 +1,4 @@
-/* css reset */
+/* css reset  */
 /* * {
   box-sizing: border-box;
   font-family: "Roboto";
@@ -139,16 +139,27 @@ body::-webkit-scrollbar {
 
 /* nav */
 
+.content {
+  /* background-color: pink; */
+  width: 100%;
+}
+
+/* #informationForm {
+  max-width: 1500px;
+} */
+
 .createProductTitle {
   /* background-color: pink; */
   height: 3.5rem;
   border-bottom: 6.6px solid #f2af44;
+  /* width: 100% !important; */
 }
 
 .title {
   width: 100%;
-  /* border:1px solid red; */
+  /* border: 1px solid red; */
   margin-top: 1.43rem;
+  text-align: center;
 }
 
 .title P {
@@ -158,8 +169,8 @@ body::-webkit-scrollbar {
 
 /* main */
 
-.informationForm {
-  /* border: 2px solid red; */
+#informationForm {
+  border: 2px solid blue;
   width: 95%;
   margin-left: 4.5rem;
 }
@@ -193,26 +204,21 @@ select::-ms-expand {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
-  /* background: url("./Img/Polygon 1.png") no-repeat 97% center; */
+  background: url("../../images/Polygon 1.png") no-repeat 97% center;
   padding-right: 3rem;
+  margin-bottom: 1rem;
 }
 
-select.form-control:focus {
-  border-color: #ccc;
-  outline: none;
-  box-shadow: none;
-}
-
-input[type="text"],
-input[type="number"] {
-  /* background:pink; */
+.input {
+  /* background: pink; */
   width: 13.93rem;
   height: 1.88rem;
   border-color: lightgray;
   border-radius: 0rem;
+  margin-bottom: 1rem;
 }
 
-input.form-control:focus {
+.input.form-control:focus {
   border-color: #ccc;
   outline: none;
   box-shadow: none;
@@ -258,6 +264,18 @@ input.form-control:focus {
   font-weight: bold;
 }
 
+/* .barCodeAddOldCode {
+  flex-grow: 1;
+}
+
+.supplierAddBrand {
+  flex-grow: 1;
+}
+
+.attributeAddColor {
+  flex-grow: 1;
+} */
+
 .otherInformationInput {
   /* border: 1px solid red; */
   display: flex;
@@ -270,15 +288,19 @@ input.form-control:focus {
 
 .otherInformationDescriptionTitle {
   /* margin-right: 2.8rem; */
+
   position: absolute;
   top: 0.1rem;
 }
 
 .otherInformationDescriptionInput {
+  /* border: 1px solid red; */
   width: 54.2rem !important;
   height: 4.25rem !important;
   margin-left: 6rem;
-  margin-right: 35rem;
+  /* margin-right: 29rem; */
+  border-radius: 0 !important;
+  margin-bottom: 3rem;
 }
 
 .inquireBtn {
@@ -350,11 +372,46 @@ button {
   margin-right: 1.4rem;
 }
 
+.otherInformationSupplierInput {
+  /* background-color: pink; */
+  width: 13.93rem;
+  height: 1.88rem;
+  border-color: lightgray;
+  border-radius: 0rem;
+  margin-bottom: 1rem;
+}
+
 .otherInformationBrand {
-  margin-left: -3.7rem;
+  margin-left: 2rem;
   margin-right: 2.5rem;
 }
 
+/* .otherInformationCalendarImgRelative {
+  position: relative;
+}
+
+.otherInformationCalendarImg {
+  position: absolute;
+  left: 19rem;
+  top: 0.3rem;
+}
+
+.otherInformationCalendarImg2 {
+  position: absolute;
+  left: 33.5rem;
+  top: 0.3rem;
+}
+
+.otherInformationLeast {
+  font-size: 1.13rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.otherInformationMaximum {
+  font-size: 1.13rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+} */
 .otherInformationSaleDate {
   display: flex;
   margin-left: 0rem;
@@ -607,11 +664,9 @@ button {
   background-position-y: 70%;
 }
 
-/* _________________media_________________ */
-
 @media screen and (max-width: 92rem) {
-  .informationForm {
-    /* border: 2px solid darkslateblue; */
+  #informationForm {
+    border: 2px solid darkslateblue;
     width: 95%;
     margin-left: 3rem;
   }
@@ -635,20 +690,13 @@ button {
     margin-left: 1.07rem;
     margin-right: 0.3rem;
   }
-
-  .otherInformationInput {
-    border: 1px solid green;
-  }
-
-  .otherInformationDescriptionRelative {
-    /* border: 1px solid green; */
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 78.5rem) {
-  .informationForm {
-    /* border: 2px solid darkorange; */
+  #informationForm {
+    border: 2px solid darkorange;
+    width: 95%;
+    margin-left: 3rem;
     width: 95%;
     margin-left: 3rem;
   }
@@ -677,20 +725,11 @@ button {
     margin-left: 1.1rem;
     width: 6.3rem !important;
   }
-
-  .otherInformationInput {
-    border: 1px solid blue;
-  }
-
-  .otherInformationDescriptionRelative {
-    /* border: 1px solid blue; */
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 71.5rem) {
-  .informationForm {
-    /* border: 2px solid red; */
+  #informationForm {
+    border: 2px solid red;
     width: 95%;
     margin: 2rem;
   }
@@ -700,12 +739,27 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 10rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 10rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
   }
 
   .basicName {
@@ -769,20 +823,11 @@ button {
   .otherInformationVolume {
     margin-right: 4rem;
   }
-
-  .otherInformationInput {
-    border: 1px solid purple;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid purple;
-    position: relative;
-  }
 }
 
-@media screen and (max-width: 59.5rem) {
-  .informationForm {
-    /* border: 2px solid yellow; */
+@media screen and (max-width: 63rem) {
+  #informationForm {
+    border: 2px solid lightgreen;
     width: 95%;
     margin-left: 1rem;
   }
@@ -816,6 +861,10 @@ button {
   .otherInformationSupplier {
     margin-left: 2rem;
     margin-right: 0rem;
+  }
+
+  .otherInformationSupplierInput {
+    width: 10rem;
   }
 
   .otherInformationBrand {
@@ -926,20 +975,11 @@ button {
   .otherInformationVolume {
     margin-right: 0rem;
   }
-
-  .otherInformationInput {
-    border: 1px solid yellow;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid yellow;
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 53.99rem) {
-  .informationForm {
-    /* border: 2px solid black; */
+  #informationForm {
+    border: 2px solid black;
     width: 95%;
     margin-left: 0 auto;
   }
@@ -1019,20 +1059,11 @@ button {
   .otherInformationVolume {
     margin-right: 0rem;
   }
-
-  .otherInformationInput {
-    border: 1px solid grey;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid grey;
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 51rem) {
-  .informationForm {
-    /* border: 2px solid pink; */
+  #informationForm {
+    border: 2px solid yellow;
     width: 95%;
     margin: 0 auto;
   }
@@ -1042,12 +1073,31 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 8rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 8rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .otherInformationSupplierInput {
+    width: 8rem;
   }
 
   .basicName {
@@ -1145,28 +1195,13 @@ button {
   .otherInformationVolumeInput {
     width: 4.38rem !important;
   }
-
-  .otherInformationInput {
-    border: 1px solid black;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid black;
-    position: relative;
-  }
 }
 
-@media screen and (max-width: 44.5rem) {
-  .informationForm {
-    /* border: 2px solid darkmagenta; */
+@media screen and (max-width: 46.99rem) {
+  #informationForm {
+    border: 2px solid darkmagenta;
     width: 95%;
     margin: 0 auto;
-  }
-
-  .basicInformationInput {
-    /* border: 2px solid red; */
-    width: 75%;
-    margin-left: -0.4rem !important;
   }
 
   .otherInformationSaleDateInput {
@@ -1300,28 +1335,13 @@ button {
   .otherInformationVolumeInput {
     width: 4.3rem !important;
   }
-
-  .otherInformationInput {
-    border: 1px solid pink;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid pink;
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 44.5rem) {
-  .informationForm {
-    /* border: 2px solid purple; */
+  #informationForm {
+    border: 2px solid red;
     width: 95%;
     margin: 0 auto;
-  }
-
-  .basicInformationInput {
-    /* border: 2px solid red; */
-    width: 91%;
-    margin-left: 0rem !important;
   }
 
   .select {
@@ -1329,12 +1349,31 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 7rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 7rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .otherInformationSupplierInput {
+    width: 7rem;
   }
 
   .basicInformationCertificate {
@@ -1488,27 +1527,16 @@ button {
   .otherInformationVolumeInput {
     width: 3.8rem !important;
   }
-
-  .otherInformationInput {
-    border: 1px solid orange;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid orange;
-    position: relative;
-  }
 }
 
 @media screen and (max-width: 41.5rem) {
-  .informationForm {
-    /* border: 2px solid darkgreen; */
+  #informationForm {
+    border: 2px solid orchid;
     width: 90%;
     margin: 0 auto;
   }
 
   .basicInformationInput {
-    /* border: 2px solid red; */
-    width: 73% !important;
     display: block;
   }
 
@@ -1517,12 +1545,31 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 20rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 20rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .otherInformationSupplierInput {
+    width: 20rem;
   }
 
   .basicName {
@@ -1597,8 +1644,8 @@ button {
 
   .otherInformationButton {
     position: absolute;
-    bottom: 0.3rem;
-    right: -4.8rem;
+    bottom: 1.2rem;
+    right: 3.5rem;
   }
 
   .otherInformationSaleDate {
@@ -1867,28 +1914,13 @@ button {
   .otherInformationVolumeInput {
     background-position-x: 97%;
   }
-
-  .otherInformationInput {
-    border: 1px solid lime;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid lime;
-    position: relative;
-  }
 }
-/* 37.5rem */
-@media screen and (max-width: 32.5rem) {
-  .informationForm {
-    /* border: 2px solid blue; */
+
+@media screen and (max-width: 40.5rem) {
+  #informationForm {
+    border: 2px solid darkslategray;
     width: 90%;
     margin: 0 auto;
-  }
-
-  .basicInformationInput {
-    /* border: 2px solid red; */
-    width: 70% !important;
-    margin-left: -0.3rem !important;
   }
 
   .select {
@@ -1896,18 +1928,42 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 16rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 16rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .otherInformationSupplierInput {
+    width: 16rem;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
   }
 
   .otherInformationButton {
+    /* border: 1px solid purple; */
     position: absolute;
-    bottom: 0.3rem;
-    right: -4.8rem !important ;
+    bottom: 1.2rem;
+    right: 7.2rem !important ;
   }
 
   .otherInformationDescriptionInput {
@@ -1923,16 +1979,6 @@ button {
   .otherInformationSaleDateInput {
     width: 6.1rem !important;
     height: 1.88rem !important;
-  }
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 0.3rem;
-    right: -4.8rem !important;
   }
 
   .otherInformationDash {
@@ -2048,28 +2094,13 @@ button {
   .otherInformationCalculationInput {
     width: 3.79rem !important;
   }
-
-  .otherInformationInput {
-    border: 1px solid red;
-  }
-
-  .otherInformationDescriptionRelative {
-    border: 1px solid red;
-    position: relative;
-  }
 }
 
-@media screen and (max-width: 32.99rem) {
-  .informationForm {
-    /* border: 2px solid lightslategray; */
-    width: 90%;
+@media screen and (max-width: 40rem) {
+  #informationForm {
+    border: 2px solid deeppink;
+    width: 80%;
     margin: 0 auto;
-  }
-
-  .basicInformationInput {
-    /* border: 2px solid red; */
-    width: 80% !important;
-    margin-left: 0.1rem !important;
   }
 
   .select {
@@ -2077,22 +2108,45 @@ button {
     height: 1.88rem;
   }
 
-  input[type="text"],
+  /* input[type="text"],
   input[type="number"] {
     width: 17rem;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
+  } */
+
+  .input {
+    /* background: pink; */
+    width: 17rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
   }
 
   .otherInformationSupplierInput {
-    width: 11.2rem !important;
+    width: 11rem !important;
+  }
+
+  /* .otherInformationSupplierInput {
+    width: 17rem !important;
+  } */
+
+  .otherInformationButtonRelative {
+    position: relative;
   }
 
   .otherInformationButton {
     position: absolute;
-    bottom: 0.3rem;
-    right: 0.1rem !important;
+    bottom: 1.2rem;
+    right: 7.5rem !important;
   }
 
   .otherInformationDescriptionInput {
@@ -2145,10 +2199,6 @@ button {
     margin-top: 1rem;
   }
 
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
   .otherInformationSubjectsButton {
     right: -3rem;
   }
@@ -2177,30 +2227,211 @@ button {
   .otherInformationCalculationInput {
     width: 3.4rem !important;
   }
+}
 
-  .otherInformationInput {
-    border: 1px solid lightskyblue;
+@media screen and (max-width: 39.5rem) {
+  #informationForm {
+    border: 2px solid lightgreen;
+    width: 70%;
+    margin: 0 auto;
   }
 
-  .otherInformationDescriptionRelative {
-    border: 1px solid lightskyblue;
+  .otherInformationButtonRelative {
     position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 3.3rem !important;
+  }
+
+  .otherInformationSupplierInput {
+    width: 7rem;
   }
 }
 
-@media screen and (max-width: 26.5rem) {
-  .informationForm {
-    /* border: 2px solid orchid; */
+@media screen and (max-width: 38.75rem) {
+  #informationForm {
+    border: 2px solid darksalmon;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 9.7rem !important;
+  }
+
+  .otherInformationSupplierInput {
+    width: 7rem;
+  }
+}
+
+@media screen and (max-width: 37.4rem) {
+  #informationForm {
+    border: 2px solid darkorange;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 9.7rem !important;
+  }
+
+  .otherInformationSupplierInput {
+    width: 7rem;
+  }
+}
+
+@media screen and (max-width: 598px) {
+  #informationForm {
+    border: 2px solid darkred;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 9.7rem !important;
+  }
+
+  /* .otherInformationSupplierInput {
+    width: 9rem !important;
+  } */
+
+  /* .input {
+    /* background: pink; */
+  /* width: 15rem;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-bottom: 1rem;
+  }  */
+
+  .input.form-control:focus {
+    border-color: #ccc;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 11rem !important;
+  }
+}
+
+@media screen and (max-width: 27rem) {
+  #informationForm {
+    border: 2px solid lightskyblue;
     width: 100%;
     margin: 0 auto;
   }
 
-  .otherInformationInput {
-    border: 1px solid darkslategray;
+  .otherInformationDescriptionInput {
+    width: 16.5rem !important;
+    height: 4.25rem !important;
+    margin-left: 5.55rem;
   }
 
-  .otherInformationDescriptionRelative {
-    border: 1px solid darkslategray;
-    position: relative;
+  @media screen and (max-width: 387rem) {
+    #informationForm {
+      border: 2px solid yellow;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .otherInformationDescriptionInput {
+      width: 16.5rem !important;
+      height: 4.25rem !important;
+      margin-left: 5.55rem;
+    }
+
+    .input {
+      /* background: pink; */
+      width: 13rem !important;
+      height: 1.88rem;
+      border-color: lightgray;
+      border-radius: 0rem;
+      margin-top: 0rem !important;
+    }
+
+    .select {
+      width: 13rem !important;
+      margin-top: 0rem !important;
+    }
+
+    .otherInformationCalendarImgRelative {
+      position: relative;
+    }
+
+    .otherInformationCalendarImg {
+      position: absolute;
+      left: 13rem !important;
+      top: 0.3rem;
+    }
+
+    .otherInformationCalendarImg2 {
+      position: absolute;
+      left: 19.7rem !important;
+      top: 0.3rem;
+    }
+
+    .otherInformationSaleDateInput {
+      width: 6rem !important;
+    }
+
+    .otherInformationLeastInput {
+      width: 4rem !important;
+    }
+
+    .otherInformationMaximum {
+      width: 4rem !important;
+    }
+
+    .otherInformationDescriptionInput {
+      margin-bottom: 0rem;
+    }
+
+    .otherInformationDrugOffTitleInput {
+      margin-bottom: 0rem;
+    }
+
+    .otherInformationLeastInput {
+      margin-bottom: 0rem;
+    }
+
+    .otherInformationMaximumInput {
+      margin-bottom: 0rem;
+    }
+
+    .otherInformationTaxCategoryInput {
+      margin-bottom: 0rem;
+    }
+
+    .otherInformationCalculationInput {
+      width: 3.4rem !important;
+    }
   }
 }

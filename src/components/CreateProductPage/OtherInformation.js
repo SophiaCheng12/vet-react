@@ -1,48 +1,56 @@
 import React from "react";
+import styles from "./CreateProductPage.module.css";
 
 class OtherInformation extends React.Component {
   render() {
     return (
-      <div class="otherInformation">
-        <div class="otherInformationTitle">其他資訊(選填)</div>
+      <div className={styles.otherInformation}>
+        <div className={styles.otherInformationTitle}>其他資訊(選填)</div>
 
-        <div class="otherInformationInput">
-          <div class="">
-            <div class="form-group">
-              <span class="basicInformationInputName otherInternationalBarcode">
+        <div className={styles.otherInformationInput}>
+          <div className={styles.barCodeAddOldCode}>
+            <div className="form-group">
+              <span
+                className={`${styles.basicInformationInputName}
+              ${styles.otherInternationalBarcode}`}
+              >
                 國際條碼 :&nbsp;
               </span>
-              <label for="basicInformationProductName">
+              <label htmlFor="basicInformationProductName">
                 <input
                   type="number"
-                  class="form-control"
+                  className={`form-control ${styles.input}`}
                   id="basicInformationProductName"
                 />
               </label>
             </div>
 
-            <div class="form-group">
-              <span class="basicInformationInputName otherOldCode">
+            <div className="form-group">
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherOldCode} `}
+              >
                 舊代碼 :&nbsp;
               </span>
-              <label for="exampleInputPassword3">
+              <label htmlFor="exampleInputPassword3">
                 <input
                   type="number"
-                  class="form-control"
+                  className={`form-control ${styles.input}`}
                   id="exampleInputPassword3"
                 />
               </label>
             </div>
           </div>
 
-          <div>
-            <div class="form-group">
-              <span class="basicInformationInputName otherInformationAttribute">
+          <div className={styles.attributeAddColor}>
+            <div className="form-group">
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherInformationAttribute}  `}
+              >
                 屬性 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select"
+                  className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -54,13 +62,15 @@ class OtherInformation extends React.Component {
               </label>
             </div>
 
-            <div class="form-group">
-              <span class="basicInformationInputName otherInformationColor">
+            <div className="form-group">
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherInformationColor} `}
+              >
                 顏色 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select"
+                  className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -73,36 +83,42 @@ class OtherInformation extends React.Component {
             </div>
           </div>
 
-          <div>
-            <div class="form-group otherInformationButtonRelative">
-              <span class="basicInformationInputName otherInformationSupplier">
+          <div className={styles.supplierAddBrand}>
+            <div
+              className={`form-group ${styles.otherInformationButtonRelative}`}
+            >
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherInformationSupplier} `}
+              >
                 供應商 :&nbsp;
               </span>
-              <label for="exampleInputPassword4">
+              <label htmlFor="exampleInputPassword4">
                 <input
                   type="text"
-                  class="form-control otherInformationSupplierInput"
+                  className={`form-control ${styles.otherInformationSupplierInput}`}
                   id="exampleInputPassword4"
                 />
               </label>
 
-              <span class=" otherInformationButton">
-                <button type="button" class="btn inquireBtn">
-                  <span class="buttonWord">查詢</span>
+              <span className={styles.otherInformationButton}>
+                <button type="button" className={`btn ${styles.inquireBtn} `}>
+                  <span className={styles.buttonWord}>查詢</span>
                 </button>
-                <button type="button" class="btn removeBtn">
-                  <span class="removeButtonWord">清除</span>
+                <button type="button" className={`btn ${styles.removeBtn} `}>
+                  <span className={styles.removeButtonWord}>清除</span>
                 </button>
               </span>
             </div>
 
-            <div class="form-group">
-              <span class="basicInformationInputName otherInformationBrand">
+            <div className="form-group">
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherInformationBrand} `}
+              >
                 品牌 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select"
+                  className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -116,63 +132,73 @@ class OtherInformation extends React.Component {
           </div>
         </div>
 
-        <div class="form-group otherInformationDescriptionRelative">
-          <span class="basicInformationInputName otherInformationDescriptionTitle">
+        <div
+          className={`form-group ${styles.otherInformationDescriptionRelative}`}
+        >
+          <span
+            className={`${styles.basicInformationInputName} ${styles.otherInformationDescriptionTitle} `}
+          >
             描述 :
           </span>
 
-          <label for="exampleInputPassword5">
+          <label htmlFor="exampleInputPassword5">
             <input
               type="text"
-              class="form-control otherInformationDescriptionInput"
+              className={`form-control ${styles.otherInformationDescriptionInput}`}
               id="exampleInputPassword5"
             />
           </label>
         </div>
 
-        <div class="otherInformationInputPart2">
-          <div class="otherInformationSaleDate">
-            <div class="otherInformationCalendarImgRelative">
-              <span class="basicInformationInputName otherInformationSaleDateTitle">
+        <div className={styles.otherInformationInputPart2}>
+          <div className={styles.otherInformationSaleDate}>
+            <div className={styles.otherInformationCalendarImgRelative}>
+              <span
+                className={`${styles.basicInformationInputName}  ${styles.otherInformationSaleDateTitle}`}
+              >
                 可銷售日期 :&nbsp;
               </span>
-              <label for="exampleInputPassword3">
+              <label htmlFor="exampleInputPassword3">
                 <input
                   type="text"
-                  class="form-control otherInformationSaleDateInput"
+                  className={`form-control  ${styles.otherInformationSaleDateInput}  ${styles.input}`}
                   id="exampleInputPassword3"
                 />
               </label>
               <img
                 src="./Img/calendar.png"
-                class="otherInformationCalendarImg"
+                className={styles.otherInformationCalendarImg}
                 alt=""
               />
 
-              <span class="basicInformationInputName otherInformationDash">
+              <span
+                className={`${styles.basicInformationInputName} ${styles.otherInformationDash} `}
+              >
                 -
               </span>
-              <label for="exampleInputPassword3">
+              <label htmlFor="exampleInputPassword3">
                 <input
                   type="text"
-                  class="form-control otherInformationSaleDateInput"
+                  className={`form-control ${styles.otherInformationSaleDateInput}  ${styles.input}`}
                   id="exampleInputPassword3"
                 />
               </label>
               <img
                 src="./Img/calendar.png"
-                class="otherInformationCalendarImg2"
+                className={styles.otherInformationCalendarImg2}
                 alt=""
               />
             </div>
 
             <div>
-              <span class="basicInformationInputName otherInformationIfInvalid">
+              <span
+                className={`${styles.basicInformationInputName}  ${styles.otherInformationIfInvalid} `}
+              >
                 是否失效 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select  otherInformationIfInvalidSelect"
+                  className={`  form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} `}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -185,34 +211,17 @@ class OtherInformation extends React.Component {
             </div>
           </div>
 
-          <div class="otherInformationSetPrice">
-            <div class="otherInformationAllTitle">
+          <div className={styles.otherInformationSetPrice}>
+            <div className={styles.otherInformationAllTitle}>
               <div>
-                <span class="basicInformationInputName otherInformationSetPriceTitle">
+                <span
+                  className={`  ${styles.basicInformationInputName}   ${styles.otherInformationSetPriceTitle}`}
+                >
                   自由設定價格 :
                 </span>
-                <label for="exampleFormControlSelect1">
+                <label htmlFor="exampleFormControlSelect1">
                   <select
-                    class="form-control select  otherInformationIfInvalidSelect otherInformationTitleInput"
-                    id="exampleFormControlSelect1"
-                  >
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                  </select>
-                </label>
-              </div>
-
-              <div>
-                <span class="basicInformationInputName discountMerchandise">
-                  是否為折扣商品 :
-                </span>
-                <label for="exampleFormControlSelect1">
-                  <select
-                    class="form-control select  otherInformationIfInvalidSelect
-                        otherInformationTitleInput discountMerchandiseInput"
+                    className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} ${styles.otherInformationTitleInput}  `}
                     id="exampleFormControlSelect1"
                   >
                     <option></option>
@@ -226,15 +235,35 @@ class OtherInformation extends React.Component {
 
               <div>
                 <span
-                  class="basicInformationInputName otherInformationBatchNumber
-                      "
+                  className={`${styles.basicInformationInputName}  ${styles.discountMerchandise} `}
+                >
+                  是否為折扣商品 :
+                </span>
+                <label htmlFor="exampleFormControlSelect1">
+                  <select
+                    className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}
+                        ${styles.otherInformationTitleInput}  ${styles.discountMerchandiseInput}  `}
+                    id="exampleFormControlSelect1"
+                  >
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationBatchNumber} `}
                 >
                   批號控制 :
                 </span>
-                <label for="exampleFormControlSelect1">
+                <label htmlFor="exampleFormControlSelect1">
                   <select
-                    class="form-control select  otherInformationIfInvalidSelect
-                        otherInformationTitleInput otherInformationBatchNumberInput"
+                    className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
+                        ${styles.otherInformationTitleInput} ${styles.otherInformationBatchNumberInput} `}
                     id="exampleFormControlSelect1"
                   >
                     <option></option>
@@ -247,13 +276,15 @@ class OtherInformation extends React.Component {
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationInventory">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationInventory} `}
+                >
                   是否為存貨 :
                 </span>
-                <label for="exampleFormControlSelect1">
+                <label htmlFor="exampleFormControlSelect1">
                   <select
-                    class="form-control select  otherInformationIfInvalidSelect
-                        otherInformationTitleInput otherInformationInventoryInput"
+                    className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
+                        ${styles.otherInformationTitleInput} ${styles.otherInformationInventoryInput} `}
                     id="exampleFormControlSelect1"
                   >
                     <option></option>
@@ -266,14 +297,16 @@ class OtherInformation extends React.Component {
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationSafetyStock">
+                <span
+                  className={` ${styles.basicInformationInputName}  ${styles.otherInformationSafetyStock}  `}
+                >
                   安全庫存量 :
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationIfInvalidSelect
-                        otherInformationTitleInput otherInformationSafetyStockInput"
+                    className={` form-control ${styles.otherInformationIfInvalidSelect}
+                      ${styles.otherInformationTitleInput}  ${styles.otherInformationSafetyStockInput} ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
@@ -281,17 +314,17 @@ class OtherInformation extends React.Component {
             </div>
           </div>
 
-          <div class="otherInformationDrugOff">
+          <div className={styles.otherInformationDrugOff}>
             <div>
               <span
-                class="basicInformationInputName
-                    otherInformationDrugOffTitle"
+                className={` ${styles.basicInformationInputName}
+                    ${styles.otherInformationDrugOffTitle}  `}
               >
                 是否可斷藥 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select otherInformationIfInvalidSelect  otherInformationDrugOffTitleInput"
+                  className={` form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationDrugOffTitleInput}  `}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -304,25 +337,29 @@ class OtherInformation extends React.Component {
             </div>
 
             <div>
-              <span class="basicInformationInputName otherInformationTestValue">
+              <span
+                className={`${styles.basicInformationInputName}   ${styles.otherInformationTestValue}  `}
+              >
                 檢驗數值範圍 :
               </span>
-              <span class="otherInformationLeast">最小</span>
-              <label for="exampleInputPassword3">
+              <span className={` ${styles.otherInformationLeast}   `}>
+                最小
+              </span>
+              <label htmlFor="exampleInputPassword3">
                 <input
                   type="text"
-                  class="form-control otherInformationLeastInput"
+                  className={`form-control ${styles.otherInformationLeastInput}  ${styles.input}`}
                   id="exampleInputPassword3"
                 />
               </label>
 
-              <span class="otherInformationTestValueDash">-</span>
+              <span className={styles.otherInformationTestValueDash}>-</span>
 
-              <span class="otherInformationMaximum"> 最大</span>
-              <label for="exampleInputPassword3">
+              <span className={styles.otherInformationMaximum}> 最大</span>
+              <label htmlFor="exampleInputPassword3">
                 <input
                   type="text"
-                  class="form-control otherInformationMaximumInput"
+                  className={`form-control ${styles.otherInformationMaximumInput}`}
                   id="exampleInputPassword3"
                 />
               </label>
@@ -330,61 +367,75 @@ class OtherInformation extends React.Component {
           </div>
         </div>
 
-        <div class="otherInformationInputPart3">
-          <div class="otherInformationSubjects">
-            <div class="form-group otherInformationButtonRelative otherInformationPurchase">
-              <span class="basicInformationInputName otherInformationPurchaseTitle">
+        <div className={styles.otherInformationInputPart3}>
+          <div className={styles.otherInformationSubjects}>
+            <div
+              className={`form-group ${styles.otherInformationButtonRelative}  ${styles.otherInformationPurchase} `}
+            >
+              <span
+                className={`${styles.basicInformationInputName}   ${styles.otherInformationPurchaseTitle} `}
+              >
                 進貨科目 :&nbsp;
               </span>
-              <label for="exampleInputPassword4">
+              <label htmlFor="exampleInputPassword4">
                 <input
                   type="text"
-                  class="form-control otherInformationPurchaseInput"
+                  className={`form-control ${styles.otherInformationPurchaseInput} ${styles.input} `}
                   id="exampleInputPassword4"
                 />
               </label>
 
-              <span class="otherInformationButton otherInformationSubjectsButton">
-                <button type="button" class="btn inquireBtn">
-                  <span class="buttonWord">查詢</span>
+              <span
+                className={`${styles.otherInformationButton}    ${styles.otherInformationSubjectsButton} `}
+              >
+                <button type="button" className={` btn ${styles.inquireBtn}  `}>
+                  <span className={styles.buttonWord}>查詢</span>
                 </button>
-                <button type="button" class="btn removeBtn">
-                  <span class="removeButtonWord">清除</span>
+                <button type="button" className={`   btn ${styles.removeBtn} `}>
+                  <span className={styles.removeButtonWord}>清除</span>
                 </button>
               </span>
             </div>
 
-            <div class="form-group otherInformationButtonRelative">
-              <span class="basicInformationInputName otherInformationSalesTitle">
+            <div
+              className={`form-group  ${styles.otherInformationButtonRelative}`}
+            >
+              <span
+                className={`${styles.basicInformationInputName}  ${styles.otherInformationSalesTitle}`}
+              >
                 銷貨科目 :&nbsp;
               </span>
-              <label for="exampleInputPassword4">
+              <label htmlFor="exampleInputPassword4">
                 <input
                   type="text"
-                  class="form-control  otherInformationSalesInput"
+                  className={`form-control  ${styles.otherInformationSalesInput}  ${styles.input}`}
                   id="exampleInputPassword4"
                 />
               </label>
 
-              <span class=" otherInformationButton otherInformationSubjectsButton">
-                <button type="button" class="btn inquireBtn">
-                  <span class="buttonWord">查詢</span>
+              <span
+                className={`${styles.otherInformationButton}  ${styles.otherInformationSubjectsButton}  `}
+              >
+                <button type="button" className={`btn  ${styles.inquireBtn}`}>
+                  <span className="buttonWord">查詢</span>
                 </button>
-                <button type="button" class="btn removeBtn">
-                  <span class="removeButtonWord">清除</span>
+                <button type="button" className={`btn  ${styles.removeBtn}`}>
+                  <span className={styles.removeButtonWord}>清除</span>
                 </button>
               </span>
             </div>
           </div>
 
-          <div class="otherInformationSaleCurrencyFlex">
+          <div className={styles.otherInformationSaleCurrencyFlex}>
             <div>
-              <span class="basicInformationInputName otherInformationSaleCurrencyTitle">
+              <span
+                className={`${styles.basicInformationInputName}  ${styles.otherInformationSaleCurrencyTitle} `}
+              >
                 銷售幣別 :&nbsp;
               </span>
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select otherInformationSaleCurrencyInput"
+                  className={`form-control ${styles.select}  ${styles.otherInformationSaleCurrencyInput} `}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -397,13 +448,15 @@ class OtherInformation extends React.Component {
             </div>
 
             <div>
-              <span class="basicInformationInputName otherInformationCostCalculation">
+              <span
+                className={` ${styles.basicInformationInputName}   ${styles.otherInformationCostCalculation} `}
+              >
                 成本計算原則 :&nbsp;
               </span>
 
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select otherInformationCostCalculationInput"
+                  className={`form-control ${styles.select}  ${styles.otherInformationCostCalculationInput} `}
                   id="exampleFormControlSelect1"
                 >
                   <option></option>
@@ -416,13 +469,15 @@ class OtherInformation extends React.Component {
             </div>
 
             <div>
-              <span class="basicInformationInputName otherInformationTaxCategory">
+              <span
+                className={` ${styles.basicInformationInputName}  ${styles.otherInformationTaxCategory} `}
+              >
                 稅項類別 :
               </span>
 
-              <label for="exampleFormControlSelect1">
+              <label htmlFor="exampleFormControlSelect1">
                 <select
-                  class="form-control select otherInformationTaxCategoryInput"
+                  className={`form-control ${styles.select}  ${styles.otherInformationTaxCategoryInput} `}
                   id="exampleFormControlSelect1"
                 >
                   {/* <!-- otherInformationIfInvalidSelect otherInformationDrugOffTitleInput --> */}
@@ -437,30 +492,34 @@ class OtherInformation extends React.Component {
           </div>
         </div>
 
-        <div class="otherInformationInputPart4">
-          <div class="otherInformationPart4AllInput">
+        <div className={styles.otherInformationInputPart4}>
+          <div className={styles.otherInformationPart4AllInput}>
             <div>
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationBoxNumber} `}
+                >
                   每板箱數 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber otherInformationUnitGrossWeight">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationBoxNumber}  ${styles.otherInformationUnitGrossWeight} `}
+                >
                   單位毛重 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput otherInformationUnitWeightInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
                   />
@@ -470,27 +529,31 @@ class OtherInformation extends React.Component {
 
             <div>
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber otherInformationQuantity">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationBoxNumber}   ${styles.otherInformationQuantity} `}
+                >
                   每箱數量 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input} `}
                     id="exampleInputPassword3"
                   />
                 </label>
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber otherInformationUnitNetWeight">
+                <span
+                  className={`${styles.basicInformationInputName} ${styles.otherInformationBoxNumber}  ${styles.otherInformationUnitNetWeight}`}
+                >
                   單位淨重 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput
-                        otherInformationUnitWeightInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}
+                       ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
                   />
@@ -500,27 +563,31 @@ class OtherInformation extends React.Component {
 
             <div>
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber otherInformationNumber">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationBoxNumber}  ${styles.otherInformationNumber}`}
+                >
                   每盒數量 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput} ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationVolume">
+                <span
+                  className={`${styles.basicInformationInputName}  ${styles.otherInformationVolume} `}
+                >
                   材積 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput
-                        otherInformationVolumeInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}
+                        ${styles.otherInformationVolumeInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
                   />
@@ -530,27 +597,31 @@ class OtherInformation extends React.Component {
 
             <div>
               <div>
-                <span class="basicInformationInputName otherInformationBoxNumber otherInformationSpecification">
+                <span
+                  className={` ${styles.basicInformationInputName}   ${styles.otherInformationBoxNumber} ${styles.otherInformationSpecification} `}
+                >
                   規格 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
               </div>
 
               <div>
-                <span class="basicInformationInputName otherInformationCalculationTitle">
+                <span
+                  className={` ${styles.basicInformationInputName}   ${styles.otherInformationCalculationTitle} `}
+                >
                   長寬高 :&nbsp;
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput
-                        otherInformationCalculationInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}
+                       ${styles.otherInformationCalculationInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
@@ -558,11 +629,11 @@ class OtherInformation extends React.Component {
                 <span>
                   <img src="./Img/x.png" alt="" />
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput
-                       otherInformationCalculationInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}
+                       ${styles.otherInformationCalculationInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                   />
                 </label>
@@ -570,11 +641,11 @@ class OtherInformation extends React.Component {
                 <span>
                   <img src="./Img/x.png" alt="" />
                 </span>
-                <label for="exampleInputPassword3">
+                <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    class="form-control otherInformationBoxNumberInput
-                        otherInformationCalculationInput"
+                    className={`form-control ${styles.otherInformationBoxNumberInput}
+                        ${styles.otherInformationCalculationInput} ${styles.input} `}
                     id="exampleInputPassword3"
                   />
                 </label>
@@ -584,12 +655,16 @@ class OtherInformation extends React.Component {
             </div>
           </div>
 
-          <div class="otherInformationUploadPhoto">
-            <span class="basicInformationInputName otherInformationProductPicture">
+          <div className={styles.otherInformationUploadPhoto}>
+            <span
+              className={`  ${styles.basicInformationInputName}  ${styles.otherInformationProductPicture}  `}
+            >
               商品圖片
             </span>
             <img src="./Img/arrow.png" alt="" />
-            <span class="otherInformationUploadPhotoTitle">上傳照片</span>
+            <span className={styles.otherInformationUploadPhotoTitle}>
+              上傳照片
+            </span>
           </div>
         </div>
       </div>
