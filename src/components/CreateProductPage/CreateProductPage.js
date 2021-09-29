@@ -7,6 +7,20 @@ import styles from "./CreateProductPage.module.css";
 import InformationTotalBtn from "./InformationTotalBtn.js";
 
 class CreateProductPage extends React.Component {
+  state = {
+    searchBasicInformationData: {},
+  };
+
+  searchBasicInformationFunction = (e) => {
+    console.log("ok");
+    this.setState({
+      searchBasicInformationData: {
+        ...this.state.searchBasicInformationData,
+        [e.target.name]: e.target.value,
+      },
+    });
+  };
+
   render() {
     return (
       <div className={styles.content}>
@@ -17,7 +31,14 @@ class CreateProductPage extends React.Component {
             <form className={styles.form}>
               <div className="container-fluid" id={styles.informationForm}>
                 <div className={styles.row}>
-                  <BasicInformation />
+                  <BasicInformation
+                    searchBasicInformationData={
+                      this.state.searchBasicInformationData
+                    }
+                    searchBasicInformationFunction={
+                      this.searchBasicInformationFunction
+                    }
+                  />
                   <OtherInformation />
                 </div>
               </div>

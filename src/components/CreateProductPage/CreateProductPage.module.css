@@ -386,32 +386,6 @@ button {
   margin-right: 2.5rem;
 }
 
-/* .otherInformationCalendarImgRelative {
-  position: relative;
-}
-
-.otherInformationCalendarImg {
-  position: absolute;
-  left: 19rem;
-  top: 0.3rem;
-}
-
-.otherInformationCalendarImg2 {
-  position: absolute;
-  left: 33.5rem;
-  top: 0.3rem;
-}
-
-.otherInformationLeast {
-  font-size: 1.13rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-}
-.otherInformationMaximum {
-  font-size: 1.13rem;
-  font-weight: 500;
-  margin-right: 0.5rem;
-} */
 .otherInformationSaleDate {
   display: flex;
   margin-left: 0rem;
@@ -524,6 +498,7 @@ button {
 .otherInformationMaximumInput {
   width: 6.06rem !important;
   height: 1.88rem !important;
+  border-radius: 0px;
 }
 
 .otherInformationTestValueDash {
@@ -653,16 +628,18 @@ button {
 
 .otherInformationUnitWeightInput {
   /* text-indent:4.6rem; */
-  /* background: url("./Img/g.png") no-repeat; */
+  background: url("../../images/g.png") no-repeat 97% center;
   background-position-x: 90%;
   background-position-y: 70%;
 }
 
 .otherInformationVolumeInput {
-  /* background: url("./Img/cbm.png") no-repeat; */
+  background: url("../../images/cbm.png") no-repeat 97% center;
   background-position-x: 90%;
   background-position-y: 70%;
 }
+
+/* ---------------media------------------------------------------- */
 
 @media screen and (max-width: 92rem) {
   #informationForm {
@@ -727,7 +704,7 @@ button {
   }
 }
 
-@media screen and (max-width: 71.5rem) {
+@media screen and (max-width: 72.5rem) {
   #informationForm {
     border: 2px solid red;
     width: 95%;
@@ -738,14 +715,6 @@ button {
     width: 10rem;
     height: 1.88rem;
   }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 10rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
 
   .input {
     /* background: pink; */
@@ -823,6 +792,10 @@ button {
   .otherInformationVolume {
     margin-right: 4rem;
   }
+
+  .otherInformationSupplierInput {
+    width: 9.99rem !important;
+  }
 }
 
 @media screen and (max-width: 63rem) {
@@ -880,6 +853,7 @@ button {
     position: absolute;
     bottom: 3rem;
     right: 0.8rem;
+    border: 1px solid red !important;
   }
 
   .otherInformationDescriptionInput {
@@ -977,7 +951,7 @@ button {
   }
 }
 
-@media screen and (max-width: 53.99rem) {
+@media screen and (max-width: 55.1rem) {
   #informationForm {
     border: 2px solid black;
     width: 95%;
@@ -1061,7 +1035,7 @@ button {
   }
 }
 
-@media screen and (max-width: 51rem) {
+@media screen and (max-width: 52.5rem) {
   #informationForm {
     border: 2px solid yellow;
     width: 95%;
@@ -1072,14 +1046,6 @@ button {
     width: 8rem;
     height: 1.88rem;
   }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 8rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
 
   .input {
     /* background: pink; */
@@ -1097,7 +1063,7 @@ button {
   }
 
   .otherInformationSupplierInput {
-    width: 8rem;
+    width: 8rem !important;
   }
 
   .basicName {
@@ -1197,147 +1163,7 @@ button {
   }
 }
 
-@media screen and (max-width: 46.99rem) {
-  #informationForm {
-    border: 2px solid darkmagenta;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .otherInformationSaleDateInput {
-    width: 7rem !important;
-    height: 1.88rem !important;
-  }
-
-  .otherInformationIfInvalid {
-    margin-left: 1rem;
-    margin-right: 0rem;
-  }
-
-  .otherInformationSaleDateTitle {
-    margin-right: 0rem;
-  }
-
-  .otherInformationCalendarImgRelative {
-    position: relative;
-  }
-
-  .otherInformationCalendarImg {
-    position: absolute;
-    left: 12rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationCalendarImg2 {
-    position: absolute;
-    left: 20.85rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationSetPriceTitle {
-    white-space: nowrap;
-  }
-
-  .otherInformationTitleInput {
-    margin-top: 1rem;
-    width: 7rem !important;
-  }
-
-  .discountMerchandiseInput {
-    margin-left: 1.9rem;
-    width: 8rem !important;
-  }
-
-  .otherInformationBatchNumberInput {
-    margin-left: 1.1rem;
-    width: 4.8rem !important;
-  }
-
-  .otherInformationInventoryInput {
-    margin-left: 1.1rem;
-    width: 5.8rem !important;
-  }
-
-  .otherInformationSafetyStockInput {
-    margin-left: 1.1rem;
-    width: 6rem !important;
-  }
-
-  .otherInformationDrugOffTitle {
-    margin-right: 0rem;
-  }
-
-  .otherInformationTestValue {
-    margin-left: 1rem;
-    margin-right: 0.4rem;
-  }
-
-  .otherInformationLeast {
-    font-size: 1.13rem;
-    font-weight: 500;
-    margin-right: 0rem;
-  }
-  .otherInformationMaximum {
-    font-size: 1.13rem;
-    font-weight: 500;
-    margin-right: 0rem;
-  }
-
-  .otherInformationLeastInput {
-    width: 5rem !important;
-    height: 1.88rem !important;
-  }
-
-  .otherInformationMaximumInput {
-    width: 5rem !important;
-    height: 1.88rem !important;
-  }
-
-  .otherInformationDrugOffTitleInput {
-    width: 2.5rem !important;
-  }
-
-  .otherInformationTestValueDash {
-    margin-left: 0.3rem;
-    margin-right: 0.6rem;
-  }
-
-  .otherInformationBoxNumberInput {
-    width: 3rem !important;
-    margin-bottom: 1rem;
-  }
-
-  .otherInformationCalculationTitle {
-    margin-right: 0rem;
-    margin-left: -0.5rem;
-  }
-
-  .otherInformationCalculationInput {
-    width: 2rem !important;
-  }
-
-  .otherInformationBoxNumber {
-    margin-right: 0rem;
-  }
-
-  .otherInformationQuantity,
-  .otherInformationUnitNetWeight,
-  .otherInformationNumber,
-  .otherInformationVolume,
-  .otherInformationSpecification {
-    margin-left: 1rem;
-  }
-
-  .otherInformationVolume {
-    margin-right: 0rem;
-  }
-
-  .otherInformationVolumeInput {
-    width: 4.3rem !important;
-  }
-}
-
-@media screen and (max-width: 44.5rem) {
+@media screen and (max-width: 47.5rem) {
   #informationForm {
     border: 2px solid red;
     width: 95%;
@@ -1348,14 +1174,6 @@ button {
     width: 7rem;
     height: 1.88rem;
   }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 7rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
 
   .input {
     /* background: pink; */
@@ -1373,7 +1191,7 @@ button {
   }
 
   .otherInformationSupplierInput {
-    width: 7rem;
+    width: 7rem !important;
   }
 
   .basicInformationCertificate {
@@ -1527,9 +1345,19 @@ button {
   .otherInformationVolumeInput {
     width: 3.8rem !important;
   }
+
+  .otherInformationLeastInput {
+    width: 4rem !important;
+    height: 1.88rem !important;
+  }
+
+  .otherInformationMaximumInput {
+    width: 4rem !important;
+    height: 1.88rem !important;
+  }
 }
 
-@media screen and (max-width: 41.5rem) {
+@media screen and (max-width: 42rem) {
   #informationForm {
     border: 2px solid orchid;
     width: 90%;
@@ -1543,15 +1371,8 @@ button {
   .select {
     width: 20rem;
     height: 1.88rem;
+    /* margin-bottom: 0rem; */
   }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 20rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
 
   .input {
     /* background: pink; */
@@ -1566,10 +1387,6 @@ button {
     border-color: #ccc;
     outline: none;
     box-shadow: none;
-  }
-
-  .otherInformationSupplierInput {
-    width: 20rem;
   }
 
   .basicName {
@@ -1598,6 +1415,20 @@ button {
   .basicInformationCertificate {
     margin-left: 0rem;
     margin-right: 0.5rem;
+  }
+
+  .otherInformationInput > div {
+    display: inline-block;
+    /* border: 1px solid red; */
+  }
+
+  .otherInformationInput ~ div {
+    display: inline-block;
+    /* border: 1px solid yellow; */
+  }
+
+  .otherInformationSupplierInput {
+    width: 20rem !important;
   }
 
   .otherInformationInput {
@@ -1644,8 +1475,9 @@ button {
 
   .otherInformationButton {
     position: absolute;
-    bottom: 1.2rem;
-    right: 3.5rem;
+    bottom: 1rem !important;
+    right: -5.7rem;
+    /* border: 1px solid green !important; */
   }
 
   .otherInformationSaleDate {
@@ -1815,7 +1647,7 @@ button {
   }
 
   .otherInformationSubjectsButton {
-    right: -5rem;
+    right: -5.7rem;
   }
 
   .otherInformationPurchaseInput,
@@ -1914,384 +1746,25 @@ button {
   .otherInformationVolumeInput {
     background-position-x: 97%;
   }
-}
-
-@media screen and (max-width: 40.5rem) {
-  #informationForm {
-    border: 2px solid darkslategray;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .select {
-    width: 16rem;
-    height: 1.88rem;
-  }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 16rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
-
-  .input {
-    /* background: pink; */
-    width: 16rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-    margin-bottom: 1rem;
-  }
-
-  .input.form-control:focus {
-    border-color: #ccc;
-    outline: none;
-    box-shadow: none;
-  }
-
-  .otherInformationSupplierInput {
-    width: 16rem;
-  }
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    /* border: 1px solid purple; */
-    position: absolute;
-    bottom: 1.2rem;
-    right: 7.2rem !important ;
-  }
 
   .otherInformationDescriptionInput {
-    width: 16.1rem !important;
-    height: 4.25rem !important;
-    margin-left: 5.5rem;
-  }
-
-  .otherInformationSaleDateTitle {
-    margin-right: 0rem !important;
-  }
-
-  .otherInformationSaleDateInput {
-    width: 6.1rem !important;
-    height: 1.88rem !important;
-  }
-
-  .otherInformationDash {
-    margin-right: -2.3rem !important;
-    margin-left: 0.1rem;
-    font-weight: bold;
-  }
-
-  .otherInformationIfInvalid {
-    margin-left: 0rem;
-    margin-right: 3.5rem;
-  }
-
-  .otherInformationCalendarImgRelative {
-    position: relative;
-  }
-
-  .otherInformationCalendarImg {
-    position: absolute;
-    left: 12.95rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationCalendarImg2 {
-    position: absolute;
-    left: 20.1rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationIfInvalidSelect {
-    width: 13.2rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem !important;
-  }
-
-  .otherInformationTitleInput {
-    margin-top: 1rem;
-    width: 13.2rem !important;
-    margin-left: 1rem;
-  }
-
-  .discountMerchandiseInput {
-    margin-left: 0rem;
-    width: 13.3rem !important;
-  }
-
-  .otherInformationBatchNumberInput {
-    margin-left: 1.1rem;
-    width: 13.3rem !important;
-  }
-
-  .otherInformationInventoryInput {
-    margin-left: 0.1rem;
-    width: 13.3rem !important;
-  }
-
-  .otherInformationSafetyStockInput {
-    margin-left: 0.1rem;
-    width: 13.3rem !important;
-  }
-
-  .otherInformationLeastInput {
-    width: 3.65rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem;
-  }
-
-  .otherInformationMaximumInput {
-    width: 3.65rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem;
+    margin-bottom: 0rem;
   }
 
   .otherInformationDrugOffTitleInput {
-    width: 13.4rem !important;
-  }
-
-  .otherInformationTestValueDash {
-    margin-left: 0.3rem;
-    margin-right: 0.6rem;
-  }
-
-  .otherInformationSubjectsButton {
-    right: -6.2rem;
-  }
-
-  .otherInformationPurchaseInput,
-  .otherInformationSalesInput {
-    width: 13.5rem !important;
-  }
-
-  .otherInformationSaleCurrencyInput {
-    width: 13.5rem !important;
-  }
-
-  .otherInformationCostCalculationInput {
-    width: 13.5rem !important;
-  }
-
-  .otherInformationTaxCategoryInput {
-    width: 13.51rem !important;
-  }
-
-  .otherInformationBoxNumberInput {
-    width: 13.51rem !important;
-  }
-
-  .otherInformationCostCalculation {
-    margin-left: 0rem;
-    margin-right: 1rem !important;
-  }
-
-  .otherInformationCalculationInput {
-    width: 3.79rem !important;
-  }
-}
-
-@media screen and (max-width: 40rem) {
-  #informationForm {
-    border: 2px solid deeppink;
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .select {
-    width: 17rem;
-    height: 1.88rem;
-  }
-
-  /* input[type="text"],
-  input[type="number"] {
-    width: 17rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-  } */
-
-  .input {
-    /* background: pink; */
-    width: 17rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-    margin-bottom: 1rem;
-  }
-
-  .input.form-control:focus {
-    border-color: #ccc;
-    outline: none;
-    box-shadow: none;
-  }
-
-  .otherInformationSupplierInput {
-    width: 11rem !important;
-  }
-
-  /* .otherInformationSupplierInput {
-    width: 17rem !important;
-  } */
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 7.5rem !important;
-  }
-
-  .otherInformationDescriptionInput {
-    width: 17rem !important;
-    height: 4.25rem !important;
-    margin-left: 5.55rem;
-  }
-
-  .otherInformationSaleDateInput {
-    width: 6.6rem !important;
-    height: 1.88rem !important;
-  }
-
-  .otherInformationIfInvalid {
-    margin-left: 0rem;
-    margin-right: 3.5rem;
-  }
-
-  .otherInformationCalendarImgRelative {
-    position: relative;
-  }
-
-  .otherInformationCalendarImg {
-    position: absolute;
-    left: 13.4rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationCalendarImg2 {
-    position: absolute;
-    left: 21.09rem !important;
-    top: 0.3rem;
-  }
-
-  .otherInformationIfInvalidSelect {
-    width: 14.2rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem !important;
+    margin-bottom: 0rem;
   }
 
   .otherInformationLeastInput {
-    width: 4.05rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem;
+    margin-bottom: 0rem;
   }
 
   .otherInformationMaximumInput {
-    width: 4.05rem !important;
-    height: 1.88rem !important;
-    margin-top: 1rem;
-  }
-
-  .otherInformationSubjectsButton {
-    right: -3rem;
-  }
-
-  .otherInformationPurchaseInput,
-  .otherInformationSalesInput {
-    width: 8.5rem !important;
-  }
-
-  .otherInformationSaleCurrencyInput {
-    width: 14.2rem !important;
-  }
-
-  .otherInformationCostCalculationInput {
-    width: 14.2rem !important;
+    margin-bottom: 0rem;
   }
 
   .otherInformationTaxCategoryInput {
-    width: 14.2rem !important;
-  }
-
-  .otherInformationBoxNumberInput {
-    width: 14.2rem !important;
-  }
-
-  .otherInformationCalculationInput {
-    width: 3.4rem !important;
-  }
-}
-
-@media screen and (max-width: 39.5rem) {
-  #informationForm {
-    border: 2px solid lightgreen;
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 3.3rem !important;
-  }
-
-  .otherInformationSupplierInput {
-    width: 7rem;
-  }
-}
-
-@media screen and (max-width: 38.75rem) {
-  #informationForm {
-    border: 2px solid darksalmon;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 9.7rem !important;
-  }
-
-  .otherInformationSupplierInput {
-    width: 7rem;
-  }
-}
-
-@media screen and (max-width: 37.4rem) {
-  #informationForm {
-    border: 2px solid darkorange;
-    width: 90%;
-    margin: 0 auto;
-  }
-
-  .otherInformationButtonRelative {
-    position: relative;
-  }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 9.7rem !important;
-  }
-
-  .otherInformationSupplierInput {
-    width: 7rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -2302,28 +1775,9 @@ button {
     margin: 0 auto;
   }
 
-  .otherInformationButtonRelative {
-    position: relative;
+  .otherInformation > div {
+    display: inline-block;
   }
-
-  .otherInformationButton {
-    position: absolute;
-    bottom: 1.2rem;
-    right: 9.7rem !important;
-  }
-
-  /* .otherInformationSupplierInput {
-    width: 9rem !important;
-  } */
-
-  /* .input {
-    /* background: pink; */
-  /* width: 15rem;
-    height: 1.88rem;
-    border-color: lightgray;
-    border-radius: 0rem;
-    margin-bottom: 1rem;
-  }  */
 
   .input.form-control:focus {
     border-color: #ccc;
@@ -2338,13 +1792,49 @@ button {
   .otherInformationButton {
     position: absolute;
     bottom: 1.2rem;
-    right: 11rem !important;
+    right: -5.6rem !important;
   }
 }
 
-@media screen and (max-width: 27rem) {
+@media screen and (max-width: 579px) {
   #informationForm {
     border: 2px solid lightskyblue;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .otherInformationDescriptionInput {
+    width: 20.1rem !important;
+    height: 4.25rem !important;
+    margin-left: 5.55rem;
+  }
+
+  .otherInformationSupplierInput {
+    width: 14rem !important;
+  }
+
+  .otherInformationPurchaseInput {
+    width: 11.5rem !important;
+  }
+
+  .otherInformationSalesInput {
+    width: 11.5rem !important;
+  }
+
+  .otherInformationButtonRelative {
+    position: relative;
+  }
+
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 0rem !important;
+  }
+}
+
+@media screen and (max-width: 434px) {
+  #informationForm {
+    border: 2px solid yellow;
     width: 100%;
     margin: 0 auto;
   }
@@ -2353,85 +1843,92 @@ button {
     width: 16.5rem !important;
     height: 4.25rem !important;
     margin-left: 5.55rem;
+    margin-bottom: 0rem;
   }
 
-  @media screen and (max-width: 387rem) {
-    #informationForm {
-      border: 2px solid yellow;
-      width: 100%;
-      margin: 0 auto;
-    }
+  .input {
+    /* background: pink; */
+    width: 13rem !important;
+    height: 1.88rem;
+    border-color: lightgray;
+    border-radius: 0rem;
+    margin-top: 0rem !important;
+  }
 
-    .otherInformationDescriptionInput {
-      width: 16.5rem !important;
-      height: 4.25rem !important;
-      margin-left: 5.55rem;
-    }
+  .select {
+    width: 13rem !important;
+    margin-top: 0rem !important;
+  }
 
-    .input {
-      /* background: pink; */
-      width: 13rem !important;
-      height: 1.88rem;
-      border-color: lightgray;
-      border-radius: 0rem;
-      margin-top: 0rem !important;
-    }
+  .otherInformationCalendarImgRelative {
+    position: relative;
+  }
 
-    .select {
-      width: 13rem !important;
-      margin-top: 0rem !important;
-    }
+  .otherInformationCalendarImg {
+    position: absolute;
+    left: 13rem !important;
+    top: 0.3rem;
+  }
 
-    .otherInformationCalendarImgRelative {
-      position: relative;
-    }
+  .otherInformationCalendarImg2 {
+    position: absolute;
+    left: 19.7rem !important;
+    top: 0.3rem;
+  }
 
-    .otherInformationCalendarImg {
-      position: absolute;
-      left: 13rem !important;
-      top: 0.3rem;
-    }
+  .otherInformationSaleDateInput {
+    width: 6rem !important;
+  }
 
-    .otherInformationCalendarImg2 {
-      position: absolute;
-      left: 19.7rem !important;
-      top: 0.3rem;
-    }
+  .otherInformationLeastInput {
+    width: 4rem !important;
+  }
 
-    .otherInformationSaleDateInput {
-      width: 6rem !important;
-    }
+  .otherInformationMaximum {
+    width: 4rem !important;
+  }
 
-    .otherInformationLeastInput {
-      width: 4rem !important;
-    }
+  .otherInformationDrugOffTitleInput {
+    margin-bottom: 0rem;
+  }
 
-    .otherInformationMaximum {
-      width: 4rem !important;
-    }
+  .otherInformationLeastInput {
+    margin-bottom: 0rem;
+    width: 3.9rem !important;
+  }
 
-    .otherInformationDescriptionInput {
-      margin-bottom: 0rem;
-    }
+  .otherInformationMaximumInput {
+    margin-bottom: 0rem;
+    width: 3.9rem !important;
+  }
 
-    .otherInformationDrugOffTitleInput {
-      margin-bottom: 0rem;
-    }
+  .otherInformationTaxCategoryInput {
+    margin-bottom: 0rem;
+  }
 
-    .otherInformationLeastInput {
-      margin-bottom: 0rem;
-    }
+  .otherInformationCalculationInput {
+    width: 3.4rem !important;
+  }
 
-    .otherInformationMaximumInput {
-      margin-bottom: 0rem;
-    }
+  .otherInformationButtonRelative {
+    position: relative;
+  }
 
-    .otherInformationTaxCategoryInput {
-      margin-bottom: 0rem;
-    }
+  .otherInformationButton {
+    position: absolute;
+    bottom: 1.2rem;
+    right: 0rem !important;
+  }
 
-    .otherInformationCalculationInput {
-      width: 3.4rem !important;
-    }
+  .otherInformationSupplierInput {
+    width: 7rem !important;
+  }
+
+  .otherInformationPurchaseInput {
+    width: 6.9rem !important;
+  }
+
+  .otherInformationSalesInput {
+    width: 6.9rem !important;
   }
 }

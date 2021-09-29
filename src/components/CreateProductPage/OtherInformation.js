@@ -53,11 +53,12 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>e</option>
+                  <option>f</option>
+                  <option>g</option>
+                  <option>h</option>
+                  <option>i</option>
                 </select>
               </label>
             </div>
@@ -73,11 +74,12 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>j</option>
+                  <option>k</option>
+                  <option>l</option>
+                  <option>m</option>
+                  <option>n</option>
                 </select>
               </label>
             </div>
@@ -101,7 +103,7 @@ class OtherInformation extends React.Component {
               </label>
 
               <span className={styles.otherInformationButton}>
-                <button type="button" className={`btn ${styles.inquireBtn} `}>
+                <button type="button" className={`btn ${styles.inquireBtn}`}>
                   <span className={styles.buttonWord}>查詢</span>
                 </button>
                 <button type="button" className={`btn ${styles.removeBtn} `}>
@@ -121,11 +123,12 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>o</option>
+                  <option>p</option>
+                  <option>q</option>
+                  <option>r</option>
+                  <option>s</option>
                 </select>
               </label>
             </div>
@@ -201,11 +204,12 @@ class OtherInformation extends React.Component {
                   className={`  form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} `}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>t</option>
+                  <option>u</option>
+                  <option>v</option>
+                  <option>w</option>
+                  <option>x</option>
                 </select>
               </label>
             </div>
@@ -224,11 +228,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} ${styles.otherInformationTitleInput}  `}
                     id="exampleFormControlSelect1"
                   >
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="">--Please choose an option--</option>
+                    <option>y</option>
+                    <option>z</option>
+                    <option>a2</option>
+                    <option>b2</option>
+                    <option>y2</option>
                   </select>
                 </label>
               </div>
@@ -245,11 +250,12 @@ class OtherInformation extends React.Component {
                         ${styles.otherInformationTitleInput}  ${styles.discountMerchandiseInput}  `}
                     id="exampleFormControlSelect1"
                   >
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="">--Please choose an option--</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
                   </select>
                 </label>
               </div>
@@ -266,11 +272,12 @@ class OtherInformation extends React.Component {
                         ${styles.otherInformationTitleInput} ${styles.otherInformationBatchNumberInput} `}
                     id="exampleFormControlSelect1"
                   >
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="">--Please choose an option--</option>
+                    <option>aa</option>
+                    <option>bb</option>
+                    <option>cc</option>
+                    <option>dd</option>
+                    <option>ee</option>
                   </select>
                 </label>
               </div>
@@ -287,11 +294,12 @@ class OtherInformation extends React.Component {
                         ${styles.otherInformationTitleInput} ${styles.otherInformationInventoryInput} `}
                     id="exampleFormControlSelect1"
                   >
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    <option></option>
+                    <option value="">--Please choose an option--</option>
+                    <option>ff</option>
+                    <option>gg</option>
+                    <option>hh</option>
+                    <option>ii</option>
+                    <option>jj</option>
                   </select>
                 </label>
               </div>
@@ -327,11 +335,12 @@ class OtherInformation extends React.Component {
                   className={` form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationDrugOffTitleInput}  `}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>ll</option>
+                  <option>mm</option>
+                  <option>oo</option>
+                  <option>pp</option>
+                  <option>qq</option>
                 </select>
               </label>
             </div>
@@ -386,19 +395,19 @@ class OtherInformation extends React.Component {
               </label>
 
               <span
-                className={`${styles.otherInformationButton}    ${styles.otherInformationSubjectsButton} `}
+                className={`${styles.otherInformationButton} ${styles.otherInformationSubjectsButton} `}
               >
-                <button type="button" className={` btn ${styles.inquireBtn}  `}>
+                <button type="button" className={`btn ${styles.inquireBtn}`}>
                   <span className={styles.buttonWord}>查詢</span>
                 </button>
-                <button type="button" className={`   btn ${styles.removeBtn} `}>
+                <button type="button" className={`btn ${styles.removeBtn}`}>
                   <span className={styles.removeButtonWord}>清除</span>
                 </button>
               </span>
             </div>
 
             <div
-              className={`form-group  ${styles.otherInformationButtonRelative}`}
+              className={` form-group ${styles.otherInformationButtonRelative}  `}
             >
               <span
                 className={`${styles.basicInformationInputName}  ${styles.otherInformationSalesTitle}`}
@@ -414,13 +423,13 @@ class OtherInformation extends React.Component {
               </label>
 
               <span
-                className={`${styles.otherInformationButton}  ${styles.otherInformationSubjectsButton}  `}
+                className={`${styles.otherInformationButton}  ${styles.otherInformationSubjectsButton}`}
               >
-                <button type="button" className={`btn  ${styles.inquireBtn}`}>
-                  <span className="buttonWord">查詢</span>
+                <button type="button" className={`btn ${styles.inquireBtn}`}>
+                  <span className={styles.buttonWord}>查詢</span>
                 </button>
                 <button type="button" className={`btn  ${styles.removeBtn}`}>
-                  <span className={styles.removeButtonWord}>清除</span>
+                  <span className="removeButtonWord"> 清除</span>
                 </button>
               </span>
             </div>
@@ -438,11 +447,12 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.select}  ${styles.otherInformationSaleCurrencyInput} `}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>ok</option>
+                  <option>ok1</option>
+                  <option>ok2</option>
+                  <option>ok3</option>
+                  <option>ok4</option>
                 </select>
               </label>
             </div>
@@ -459,11 +469,12 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.select}  ${styles.otherInformationCostCalculationInput} `}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>111</option>
+                  <option>222</option>
+                  <option>333</option>
+                  <option>444</option>
+                  <option>555</option>
                 </select>
               </label>
             </div>
@@ -481,11 +492,12 @@ class OtherInformation extends React.Component {
                   id="exampleFormControlSelect1"
                 >
                   {/* <!-- otherInformationIfInvalidSelect otherInformationDrugOffTitleInput --> */}
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>66666</option>
+                  <option>77777</option>
+                  <option>88888</option>
+                  <option>99999</option>
+                  <option>11111</option>
                 </select>
               </label>
             </div>

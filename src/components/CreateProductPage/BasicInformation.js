@@ -21,6 +21,9 @@ class BasicInformation extends Component {
                   className={`form-control ${styles.input}`}
                   id="basicInformationProductName"
                   placeholder="2021/08/19"
+                  name="basicName"
+                  value={this.props.searchBasicInformationData.basicName || ""}
+                  onChange={this.props.searchBasicInformationFunction}
                 />
               </label>
             </div>
@@ -54,11 +57,12 @@ class BasicInformation extends Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>wert</option>
+                  <option>edff</option>
+                  <option>dsaa</option>
+                  <option>hfjkd</option>
+                  <option>fkl</option>
                 </select>
               </label>
             </div>
@@ -94,11 +98,12 @@ class BasicInformation extends Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
                 </select>
               </label>
             </div>
@@ -115,11 +120,12 @@ class BasicInformation extends Component {
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
                 >
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
-                  <option></option>
+                  <option value="">--Please choose an option--</option>
+                  <option>A</option>
+                  <option>B</option>
+                  <option>C</option>
+                  <option>D</option>
+                  <option>E</option>
                 </select>
               </label>
             </div>
