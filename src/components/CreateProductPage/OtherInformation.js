@@ -21,6 +21,12 @@ class OtherInformation extends React.Component {
                   type="number"
                   className={`form-control ${styles.input}`}
                   id="basicInformationProductName"
+                  name="otherInternationalBarcode"
+                  value={
+                    this.props.searchOtherInformationDataPartOne
+                      .otherInternationalBarcode || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 />
               </label>
             </div>
@@ -36,6 +42,12 @@ class OtherInformation extends React.Component {
                   type="number"
                   className={`form-control ${styles.input}`}
                   id="exampleInputPassword3"
+                  name="otherOldCode"
+                  value={
+                    this.props.searchOtherInformationDataPartOne.otherOldCode ||
+                    ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 />
               </label>
             </div>
@@ -52,6 +64,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="otherInformationAttribute"
+                  value={
+                    this.props.searchOtherInformationDataPartOne
+                      .otherInformationAttribute || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>e</option>
@@ -73,6 +91,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="otherInformationColor"
+                  value={
+                    this.props.searchOtherInformationDataPartOne
+                      .otherInformationColor || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>j</option>
@@ -99,6 +123,12 @@ class OtherInformation extends React.Component {
                   type="text"
                   className={`form-control ${styles.otherInformationSupplierInput}`}
                   id="exampleInputPassword4"
+                  name="otherInformationSupplier"
+                  value={
+                    this.props.searchOtherInformationDataPartOne
+                      .otherInformationSupplier || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 />
               </label>
 
@@ -122,6 +152,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="otherInformationBrand"
+                  value={
+                    this.props.searchOtherInformationDataPartOne
+                      .otherInformationBrand || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>o</option>
@@ -149,6 +185,12 @@ class OtherInformation extends React.Component {
               type="text"
               className={`form-control ${styles.otherInformationDescriptionInput}`}
               id="exampleInputPassword5"
+              name="otherInformationDescription"
+              value={
+                this.props.searchOtherInformationDataPartOne
+                  .otherInformationDescription || ""
+              }
+              onChange={this.props.searchOtherInformationFunction}
             />
           </label>
         </div>
@@ -163,9 +205,15 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleInputPassword3">
                 <input
-                  type="text"
+                  type="date"
                   className={`form-control  ${styles.otherInformationSaleDateInput}  ${styles.input}`}
                   id="exampleInputPassword3"
+                  name="otherInformationSaleDate"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationSaleDate || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 />
               </label>
               <img
@@ -181,9 +229,15 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleInputPassword3">
                 <input
-                  type="text"
+                  type="date"
                   className={`form-control ${styles.otherInformationSaleDateInput}  ${styles.input}`}
                   id="exampleInputPassword3"
+                  name="otherInformationSaleDateTwo"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationSaleDateTwo || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 />
               </label>
               <img
@@ -201,8 +255,14 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={`  form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} `}
+                  className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} `}
                   id="exampleFormControlSelect1"
+                  name="otherInformationIfInvalid"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationIfInvalid || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>t</option>
@@ -227,6 +287,12 @@ class OtherInformation extends React.Component {
                   <select
                     className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} ${styles.otherInformationTitleInput}  `}
                     id="exampleFormControlSelect1"
+                    name="otherInformationSetPrice"
+                    value={
+                      this.props.searchOtherInformationDataPartTwo
+                        .otherInformationSetPrice || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionTwo}
                   >
                     <option value="">--Please choose an option--</option>
                     <option>y</option>
@@ -249,6 +315,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}
                         ${styles.otherInformationTitleInput}  ${styles.discountMerchandiseInput}  `}
                     id="exampleFormControlSelect1"
+                    name="discountMerchandise"
+                    value={
+                      this.props.searchOtherInformationDataPartTwo
+                        .discountMerchandise || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionTwo}
                   >
                     <option value="">--Please choose an option--</option>
                     <option>9</option>
@@ -271,6 +343,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
                         ${styles.otherInformationTitleInput} ${styles.otherInformationBatchNumberInput} `}
                     id="exampleFormControlSelect1"
+                    name="otherInformationBatchNumber"
+                    value={
+                      this.props.searchOtherInformationDataPartTwo
+                        .otherInformationBatchNumber || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionTwo}
                   >
                     <option value="">--Please choose an option--</option>
                     <option>aa</option>
@@ -293,6 +371,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
                         ${styles.otherInformationTitleInput} ${styles.otherInformationInventoryInput} `}
                     id="exampleFormControlSelect1"
+                    name="otherInformationInventory"
+                    value={
+                      this.props.searchOtherInformationDataPartTwo
+                        .otherInformationInventory || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionTwo}
                   >
                     <option value="">--Please choose an option--</option>
                     <option>ff</option>
@@ -316,6 +400,12 @@ class OtherInformation extends React.Component {
                     className={` form-control ${styles.otherInformationIfInvalidSelect}
                       ${styles.otherInformationTitleInput}  ${styles.otherInformationSafetyStockInput} ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationSafetyStock"
+                    value={
+                      this.props.searchOtherInformationDataPartTwo
+                        .otherInformationSafetyStock || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionTwo}
                   />
                 </label>
               </div>
@@ -334,13 +424,16 @@ class OtherInformation extends React.Component {
                 <select
                   className={` form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationDrugOffTitleInput}  `}
                   id="exampleFormControlSelect1"
+                  name="otherInformationDrugOff"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationDrugOff || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 >
                   <option value="">--Please choose an option--</option>
-                  <option>ll</option>
-                  <option>mm</option>
-                  <option>oo</option>
-                  <option>pp</option>
-                  <option>qq</option>
+                  <option>是</option>
+                  <option>否</option>
                 </select>
               </label>
             </div>
@@ -359,6 +452,12 @@ class OtherInformation extends React.Component {
                   type="text"
                   className={`form-control ${styles.otherInformationLeastInput}  ${styles.input}`}
                   id="exampleInputPassword3"
+                  name="otherInformationLeast"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationLeast || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 />
               </label>
 
@@ -370,6 +469,12 @@ class OtherInformation extends React.Component {
                   type="text"
                   className={`form-control ${styles.otherInformationMaximumInput}`}
                   id="exampleInputPassword3"
+                  name="otherInformationMaximum"
+                  value={
+                    this.props.searchOtherInformationDataPartTwo
+                      .otherInformationMaximum || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionTwo}
                 />
               </label>
             </div>
@@ -391,6 +496,12 @@ class OtherInformation extends React.Component {
                   type="text"
                   className={`form-control ${styles.otherInformationPurchaseInput} ${styles.input} `}
                   id="exampleInputPassword4"
+                  name="otherInformationPurchase"
+                  value={
+                    this.props.searchOtherInformationDataPartThree
+                      .otherInformationPurchase || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionThree}
                 />
               </label>
 
@@ -419,6 +530,12 @@ class OtherInformation extends React.Component {
                   type="text"
                   className={`form-control  ${styles.otherInformationSalesInput}  ${styles.input}`}
                   id="exampleInputPassword4"
+                  name="otherInformationSales"
+                  value={
+                    this.props.searchOtherInformationDataPartThree
+                      .otherInformationSales || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionThree}
                 />
               </label>
 
@@ -446,6 +563,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}  ${styles.otherInformationSaleCurrencyInput} `}
                   id="exampleFormControlSelect1"
+                  name="otherInformationSaleCurrency"
+                  value={
+                    this.props.searchOtherInformationDataPartThree
+                      .otherInformationSaleCurrency || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionThree}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>ok</option>
@@ -468,6 +591,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}  ${styles.otherInformationCostCalculationInput} `}
                   id="exampleFormControlSelect1"
+                  name="otherInformationCostCalculation"
+                  value={
+                    this.props.searchOtherInformationDataPartThree
+                      .otherInformationCostCalculation || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionThree}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>111</option>
@@ -490,6 +619,12 @@ class OtherInformation extends React.Component {
                 <select
                   className={`form-control ${styles.select}  ${styles.otherInformationTaxCategoryInput} `}
                   id="exampleFormControlSelect1"
+                  name="otherInformationTaxCategory"
+                  value={
+                    this.props.searchOtherInformationDataPartThree
+                      .otherInformationTaxCategory || ""
+                  }
+                  onChange={this.props.searchOtherInformationFunctionThree}
                 >
                   {/* <!-- otherInformationIfInvalidSelect otherInformationDrugOffTitleInput --> */}
                   <option value="">--Please choose an option--</option>
@@ -518,6 +653,12 @@ class OtherInformation extends React.Component {
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationBoxNumber"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationBoxNumber || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -534,6 +675,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
+                    name="otherInformationUnitWeight"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationUnitWeight || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -551,6 +698,12 @@ class OtherInformation extends React.Component {
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input} `}
                     id="exampleInputPassword3"
+                    name="otherInformationQuantity"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationQuantity || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -568,6 +721,12 @@ class OtherInformation extends React.Component {
                        ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
+                    name="otherInformationUnitNetWeight"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationUnitNetWeight || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -585,6 +744,12 @@ class OtherInformation extends React.Component {
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput} ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationNumber"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationNumber || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -602,6 +767,12 @@ class OtherInformation extends React.Component {
                         ${styles.otherInformationVolumeInput}  ${styles.input}`}
                     id="exampleInputPassword3"
                     placeholder=""
+                    name="otherInformationVolume"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationVolume || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -619,6 +790,12 @@ class OtherInformation extends React.Component {
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationSpecification"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationSpecification || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
               </div>
@@ -635,6 +812,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.otherInformationBoxNumberInput}
                        ${styles.otherInformationCalculationInput}  ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationCalculationLength"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationCalculationLength || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
 
@@ -647,6 +830,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.otherInformationBoxNumberInput}
                        ${styles.otherInformationCalculationInput}  ${styles.input}`}
                     id="exampleInputPassword3"
+                    name="otherInformationCalculationWidth"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationCalculationWidth || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
 
@@ -659,6 +848,12 @@ class OtherInformation extends React.Component {
                     className={`form-control ${styles.otherInformationBoxNumberInput}
                         ${styles.otherInformationCalculationInput} ${styles.input} `}
                     id="exampleInputPassword3"
+                    name="otherInformationCalculationHeight"
+                    value={
+                      this.props.searchOtherInformationDataPartThree
+                        .otherInformationCalculationHeight || ""
+                    }
+                    onChange={this.props.searchOtherInformationFunctionThree}
                   />
                 </label>
 

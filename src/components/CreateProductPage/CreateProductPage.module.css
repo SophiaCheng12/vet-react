@@ -389,16 +389,11 @@ button {
 .otherInformationSaleDate {
   display: flex;
   margin-left: 0rem;
-  margin-top: 2.94rem;
+  margin-top: 0rem;
 }
 
 .otherInformationSaleDateTitle {
   margin-right: 1.53rem;
-}
-
-.otherInformationSaleDateInput {
-  width: 11.64rem !important;
-  height: 1.88rem !important;
 }
 
 .otherInformationDash {
@@ -423,13 +418,13 @@ button {
 
 .otherInformationCalendarImg {
   position: absolute;
-  left: 18rem;
+  left: 20.5rem;
   top: 0.3rem;
 }
 
 .otherInformationCalendarImg2 {
   position: absolute;
-  left: 31.5rem;
+  left: 36rem;
   top: 0.3rem;
 }
 
@@ -637,6 +632,15 @@ button {
   background: url("../../images/cbm.png") no-repeat 97% center;
   background-position-x: 90%;
   background-position-y: 70%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: transparent;
+  opacity: 0;
+
+  margin-right: -0.9rem;
+  margin-top: 0.2rem;
+  z-index: 999;
 }
 
 /* ---------------media------------------------------------------- */

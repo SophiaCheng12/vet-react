@@ -8,6 +8,7 @@ class InformationTotalBtn extends React.Component {
         <button
           type="button"
           className={`btn ${styles.informationCreateBtn}  ${styles.informationButtonActive} `}
+          onClick={this.props.information}
         >
           新增
         </button>

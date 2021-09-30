@@ -2,6 +2,16 @@ import React, { Component } from "react";
 import styles from "./CreateProductPage.module.css";
 
 class BasicInformation extends Component {
+  // componentDidMount = () => {
+  //   this.basicInformationCheckType();
+  // };
+
+  // basicInformationCheckType = () => {
+  //   if (!this.props.searchBasicInformationData.basicName) {
+  //     return alert("請輸入名稱");
+  //   }
+  // };
+
   render() {
     return (
       <div className={styles.basicInformation}>
@@ -40,6 +50,12 @@ class BasicInformation extends Component {
                   type="number"
                   className={`form-control ${styles.input}`}
                   id="exampleInputPassword2"
+                  name="basicInformationCode"
+                  value={
+                    this.props.searchBasicInformationData
+                      .basicInformationCode || ""
+                  }
+                  onChange={this.props.searchBasicInformationFunction}
                 />
               </label>
             </div>
@@ -56,6 +72,12 @@ class BasicInformation extends Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="basicInformationCategory"
+                  value={
+                    this.props.searchBasicInformationData
+                      .basicInformationCategory || ""
+                  }
+                  onChange={this.props.searchBasicInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>wert</option>
@@ -79,6 +101,11 @@ class BasicInformation extends Component {
                     type="number"
                     className={`form-control ${styles.input}`}
                     id="exampleInputPassword1"
+                    name="basicPrice"
+                    value={
+                      this.props.searchBasicInformationData.basicPrice || ""
+                    }
+                    onChange={this.props.searchBasicInformationFunction}
                   />
                 </label>
               </div>
@@ -97,6 +124,12 @@ class BasicInformation extends Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="basicInformationUnit"
+                  value={
+                    this.props.searchBasicInformationData
+                      .basicInformationUnit || ""
+                  }
+                  onChange={this.props.searchBasicInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>1</option>
@@ -119,6 +152,12 @@ class BasicInformation extends Component {
                 <select
                   className={`form-control ${styles.select}`}
                   id="exampleFormControlSelect1"
+                  name="basicInformationCertificate"
+                  value={
+                    this.props.searchBasicInformationData
+                      .basicInformationCertificate || ""
+                  }
+                  onChange={this.props.searchBasicInformationFunction}
                 >
                   <option value="">--Please choose an option--</option>
                   <option>A</option>
