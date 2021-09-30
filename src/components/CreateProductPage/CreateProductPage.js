@@ -5,6 +5,7 @@ import BasicInformation from "./BasicInformation.js";
 import OtherInformation from "./OtherInformation.js";
 import styles from "./CreateProductPage.module.css";
 import InformationTotalBtn from "./InformationTotalBtn.js";
+
 // import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
 
 class CreateProductPage extends React.Component {
@@ -23,6 +24,12 @@ class CreateProductPage extends React.Component {
     // console.log(
     //   this.state.searchOtherInformationDataPartTwo.otherInformationSaleDate
     // );
+
+    this.setState({
+      searchOtherInformationDataPartTwo: {
+        ...this.state.searchOtherInformationDataPartTwo,
+      },
+    });
   };
 
   searchBasicInformationFunction = (e) => {
@@ -62,36 +69,28 @@ class CreateProductPage extends React.Component {
     });
   };
 
-  // basicInformationCheckType = () => {
-  //   if (!this.state.searchBasicInformationData.basicName) {
-  //     return alert("請輸入名稱");
-  //   } else if (!this.state.searchBasicInformationData.basicInformationCode) {
-  //     return alert("請輸入代碼");
-  //   } else if (
-  //     !this.state.searchBasicInformationData.basicInformationCategory
-  //   ) {
-  //     return alert("請輸入類別");
-  //   } else if (!this.state.searchBasicInformationData.basicPrice) {
-  //     return alert("請輸入售價");
-  //   } else if (!this.state.searchBasicInformationData.basicInformationUnit) {
-  //     return alert("請輸入單位");
-  //   } else if (
-  //     !this.state.searchBasicInformationData.basicInformationCertificate
-  //   ) {
-  //     return alert("請輸入憑證類型");
-  //   }
-  //   return true;
-  // };
+  basicInformationCheckType = () => {
+    if (!this.state.searchBasicInformationData.basicName) {
+      return alert("請輸入名稱");
+    } else if (!this.state.searchBasicInformationData.basicInformationCode) {
+      return alert("請輸入代碼");
+    } else if (
+      !this.state.searchBasicInformationData.basicInformationCategory
+    ) {
+      return alert("請輸入類別");
+    } else if (!this.state.searchBasicInformationData.basicPrice) {
+      return alert("請輸入售價");
+    } else if (!this.state.searchBasicInformationData.basicInformationUnit) {
+      return alert("請輸入單位");
+    } else if (
+      !this.state.searchBasicInformationData.basicInformationCertificate
+    ) {
+      return alert("請輸入憑證類型");
+    }
+    return true;
+  };
 
-  information = () => {
-    // if (!this.basicInformationCheckType()) return;
-    console.log("ok");
-    this.setState({
-      searchOtherInformationDataPartTwo: {
-        ...this.state.searchOtherInformationDataPartTwo,
-      },
-    });
-
+  checkDate = () => {
     const timeStamp = Date.parse(
       this.state.searchOtherInformationDataPartTwo.otherInformationSaleDate
     );
@@ -100,14 +99,42 @@ class CreateProductPage extends React.Component {
       this.state.searchOtherInformationDataPartTwo.otherInformationSaleDateTwo
     );
 
-    console.log("timeStamp", timeStamp);
-    console.log("secondTimeStamp", secondTimeStamp);
+    // console.log("timeStamp", timeStamp);
+    // console.log("secondTimeStamp", secondTimeStamp);
     const timeInterval = secondTimeStamp - timeStamp;
-    console.log("timeInterval", timeInterval);
+    // console.log("timeInterval", timeInterval);
 
     if (timeInterval < 0) {
       alert("可銷售日期有誤，請進行確認，謝謝!");
     }
+  };
+
+  checkTestValue = () => {
+    const minValue =
+      this.state.searchOtherInformationDataPartTwo.otherInformationLeast;
+
+    const maxValue =
+      this.state.searchOtherInformationDataPartTwo.otherInformationMaximum;
+
+    console.log(" minValue", minValue);
+    console.log("maxValue", maxValue);
+    const digitInterval = maxValue - minValue;
+    console.log(" digitInterval", digitInterval);
+    if (digitInterval < 0) {
+      alert("檢驗數值範圍有誤，請進行確認，謝謝!");
+    }
+  };
+
+  information = () => {
+    if (!this.basicInformationCheckType()) return;
+    // console.log("ok");
+    // this.setState({
+    //   searchOtherInformationDataPartTwo: {
+    //     ...this.state.searchOtherInformationDataPartTwo,
+    //   },
+    // });
+    this.checkDate();
+    this.checkTestValue();
   };
 
   render() {

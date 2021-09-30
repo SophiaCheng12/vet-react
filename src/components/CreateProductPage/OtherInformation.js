@@ -449,16 +449,18 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleInputPassword3">
                 <input
-                  type="text"
+                  type="number"
                   className={`form-control ${styles.otherInformationLeastInput}  ${styles.input}`}
                   id="exampleInputPassword3"
                   name="otherInformationLeast"
+                  // min="0"
                   value={
                     this.props.searchOtherInformationDataPartTwo
                       .otherInformationLeast || ""
                   }
                   onChange={this.props.searchOtherInformationFunctionTwo}
                 />
+                {/* {{value < 0 ? value === 0 : value === value }} */}
               </label>
 
               <span className={styles.otherInformationTestValueDash}>-</span>
@@ -466,7 +468,7 @@ class OtherInformation extends React.Component {
               <span className={styles.otherInformationMaximum}> 最大</span>
               <label htmlFor="exampleInputPassword3">
                 <input
-                  type="text"
+                  type="number"
                   className={`form-control ${styles.otherInformationMaximumInput}`}
                   id="exampleInputPassword3"
                   name="otherInformationMaximum"
