@@ -221,46 +221,7 @@ class ProductList extends React.Component {
               </div>
             </div>
 
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div className="pagination  topPagination">
-              <div className="firstPaginationImg d-flex flex-row">
-                <div>
-                  <img src="./Img/doubleLeftArrow.png" alt="" />
-                </div>
-                <div style={{ color: "white" }}>|</div>
-                <div>
-                  <img src="./Img/leftArrow.png" alt="" />
-                </div>
-              </div>
-
-              <div className="paginationWord  paginationWord2     d-flex flex-row">
-                <p>總共2000筆 第1頁 - 共100頁</p>
-              </div>
-
-              <div className="secondPaginationImg d-flex flex-row">
-                <div>
-                  <img src="./Img/rightArrow.png" alt="" />
-                </div>
-                <div style={{ color: "white" }}>|</div>
-                <div>
-                  <img src="./Img/doubleRightArrow.png" alt="" />
-                </div>
-              </div>
-            </div>
+            <div className="pagination  topPagination"></div>
           </div>
 
           {/* <!-- secondPart --> */}
@@ -296,56 +257,10 @@ class ProductList extends React.Component {
 
           {/* <!-- bottomPagination --> */}
           <div className="firstPart bottomPagination">
-            <div className="createProductTitle  bottomPaginationTitle d-flex flex-row ">
-              <div>
-                <img src="./Img/Vector3.png" alt="" />
-              </div>
-              <div className="createProductWord d-flex flex-row">新增商品</div>
-            </div>
-
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-
-            <div className="pagination">
-              <div className="firstPaginationImg d-flex flex-row">
-                <div>
-                  <img src="./Img/doubleLeftArrow.png" alt="" />
-                </div>
-                <div style={{ color: "white" }}>|</div>
-                <div>
-                  <img src="./Img/leftArrow.png" alt="" />
-                </div>
-              </div>
-
-              <div className="paginationWord d-flex flex-row">
-                <p>總共2000筆 第1頁 - 共100頁</p>
-              </div>
-
-              <div className="secondPaginationImg d-flex flex-row">
-                <div>
-                  <img src="./Img/rightArrow.png" alt="" />
-                </div>
-                <div style={{ color: "white" }}>|</div>
-                <div>
-                  <img src="./Img/doubleRightArrow.png" alt="" />
-                </div>
-              </div>
-            </div>
+            {/* <div className="pagination"></div> */}
           </div>
         </div>
+        {/* </div> */}
         {/* <!--  bottomPagination結束在這裡--> */}
 
         {/* testPagination */}

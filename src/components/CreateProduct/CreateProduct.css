@@ -513,11 +513,14 @@ td {
   display: flex;
   padding-top: 2rem;
   border-bottom: 0px;
+  flex-grow: 1;
+  padding-left: 1rem;
   /* margin-bottom: -5rem; */
 }
 
 #createProduct .createProductWord {
   cursor: pointer;
+  /* border: 1px solid red; */
 }
 
 /* media */
@@ -927,7 +930,8 @@ td {
 .testPagination {
   display: flex;
   justify-content: center;
-  margin-bottom: 26px;
+  margin-top: 12rem;
+  margin-bottom: 5rem;
 }
 
 .paginationActive {
