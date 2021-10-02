@@ -5,8 +5,25 @@ import BasicInformation from "./BasicInformation.js";
 import OtherInformation from "./OtherInformation.js";
 import styles from "./CreateProductPage.module.css";
 import InformationTotalBtn from "./InformationTotalBtn.js";
+import SearchSupplierModal from "./SearchSupplierModal.js";
 
-// import { ThemeConsumer } from "react-bootstrap/esm/ThemeProvider";
+const supplierList = [
+  "供應商列表1",
+  "供應商列表2",
+  "供應商列表3",
+  "供應商列表4",
+  "供應商列表5",
+  "供應商列表6",
+  "供應商列表7",
+  "供應商列表8",
+  "供應商列表9",
+  "供應商列表10",
+  "供應商列表11",
+  "供應商列表12",
+  "供應商列表12",
+];
+
+// let userSupplierListFilter = [];
 
 class CreateProductPage extends React.Component {
   state = {
@@ -14,6 +31,11 @@ class CreateProductPage extends React.Component {
     searchOtherInformationDataPartOne: {},
     searchOtherInformationDataPartTwo: {},
     searchOtherInformationDataPartThree: {},
+    supplierList: [],
+    userSearchSupplier: "",
+    userSupplierListFilterState: [],
+    userClickSupplierData: "",
+    modalShow: false,
   };
 
   componentDidMount = () => {
@@ -29,6 +51,10 @@ class CreateProductPage extends React.Component {
       searchOtherInformationDataPartTwo: {
         ...this.state.searchOtherInformationDataPartTwo,
       },
+    });
+
+    this.setState({
+      supplierList: supplierList,
     });
   };
 
@@ -137,7 +163,55 @@ class CreateProductPage extends React.Component {
     this.checkTestValue();
   };
 
+  searchSuppliersList = () => {
+    console.log("ok");
+
+    const supplierListFilter = this.state.supplierList.filter((item) => {
+      return this.state.userSearchSupplier === item;
+    });
+
+    this.setState({
+      userSupplierListFilterState: supplierListFilter,
+    });
+
+    // console.log(
+    //   " userSupplierListFilterState",
+    //   this.state.userSupplierListFilterState
+    // );
+
+    return supplierListFilter;
+  };
+
+  userSearchSupplierFunction = (e) => {
+    this.setState({
+      userSearchSupplier: e.target.value,
+    });
+  };
+
+  userClickContent = (e) => {
+    // console.log("test");
+    const userClickData = e.currentTarget.dataset.supplier;
+    console.log(userClickData);
+    this.setState({
+      userClickSupplierData: userClickData,
+    });
+  };
+
+  setModalShow = (isClose) => {
+    console.log("isClose", isClose);
+    this.setState({
+      modalShow: isClose,
+    });
+  };
+
+  clearUserSearchSupplier = () => {
+    this.setState({
+      userSearchSupplier: "",
+    });
+  };
+
   render() {
+    console.log("modalShow", this.state.modalShow);
     return (
       <div className={styles.content}>
         <>
@@ -154,6 +228,19 @@ class CreateProductPage extends React.Component {
                     searchBasicInformationFunction={
                       this.searchBasicInformationFunction
                     }
+                  />
+                  <SearchSupplierModal
+                    searchSuppliersList={this.searchSuppliersList}
+                    userSearchSupplier={this.state.userSearchSupplier}
+                    userSearchSupplierFunction={this.userSearchSupplierFunction}
+                    userSupplierListFilterState={
+                      this.state.userSupplierListFilterState
+                    }
+                    closeModalFunction={this.closeModalFunction}
+                    userClickContent={this.userClickContent}
+                    modalShow={this.state.modalShow}
+                    setModalShow={this.setModalShow}
+                    clearUserSearchSupplier={this.clearUserSearchSupplier}
                   />
                   <OtherInformation
                     searchOtherInformationDataPartOne={
@@ -174,6 +261,7 @@ class CreateProductPage extends React.Component {
                     searchOtherInformationFunctionThree={
                       this.searchOtherInformationFunctionThree
                     }
+                    userClickSupplierData={this.state.userClickSupplierData}
                   />
                 </div>
               </div>

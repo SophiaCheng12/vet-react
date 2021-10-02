@@ -643,6 +643,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   z-index: 999;
 }
 
+.userClick {
+  cursor: pointer;
+}
+
 /* ---------------media------------------------------------------- */
 
 @media screen and (max-width: 92rem) {
@@ -1800,7 +1804,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-@media screen and (max-width: 579px) {
+@media screen and (max-width: 596px) {
   #informationForm {
     border: 2px solid lightskyblue;
     width: 100%;

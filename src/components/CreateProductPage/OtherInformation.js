@@ -124,11 +124,13 @@ class OtherInformation extends React.Component {
                   className={`form-control ${styles.otherInformationSupplierInput}`}
                   id="exampleInputPassword4"
                   name="otherInformationSupplier"
-                  value={
-                    this.props.searchOtherInformationDataPartOne
-                      .otherInformationSupplier || ""
-                  }
-                  onChange={this.props.searchOtherInformationFunction}
+                  // value={
+                  //   this.props.searchOtherInformationDataPartOne
+                  //     .otherInformationSupplier || ""
+                  // }
+                  // onChange={this.props.searchOtherInformationFunction}
+                  value={this.props.userClickSupplierData}
+                  disabled
                 />
               </label>
 
