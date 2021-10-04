@@ -191,9 +191,9 @@ class ProductList extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.renderPagesList();
-  }
+  // componentDidMount() {
+  //   this.renderPagesList();
+  // }
 
   render() {
     const { productList } = this.props;
@@ -277,33 +277,7 @@ class ProductList extends React.Component {
             </li>
             {/* productPages */}
             {this.renderPagesList()}
-            {/* <li className="page-item">
-              <Link
-                className="page-link"
-                to="#"
-                onClick={this.props.onCurrentPage}
-              >
-                1
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link
-                className="page-link"
-                to="#"
-                onClick={this.props.onCurrentPage}
-              >
-                2
-              </Link>
-            </li>
-            <li className="page-item">
-              <Link
-                className="page-link"
-                to="#"
-                onClick={this.props.onCurrentPage}
-              >
-                3
-              </Link>
-            </li> */}
+
             <li className={`page-item ${nextDisabled}`}>
               <Link
                 className="page-link"

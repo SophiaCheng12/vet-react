@@ -125,10 +125,7 @@ class CreateProductPage extends React.Component {
       this.state.searchOtherInformationDataPartTwo.otherInformationSaleDateTwo
     );
 
-    // console.log("timeStamp", timeStamp);
-    // console.log("secondTimeStamp", secondTimeStamp);
     const timeInterval = secondTimeStamp - timeStamp;
-    // console.log("timeInterval", timeInterval);
 
     if (timeInterval < 0) {
       alert("可銷售日期有誤，請進行確認，謝謝!");
@@ -195,6 +192,13 @@ class CreateProductPage extends React.Component {
     this.setState({
       userClickSupplierData: userClickData,
     });
+    this.setModalShow(false);
+  };
+
+  clearUserClickContent = () => {
+    this.setState({
+      userClickSupplierData: "",
+    });
   };
 
   setModalShow = (isClose) => {
@@ -207,6 +211,7 @@ class CreateProductPage extends React.Component {
   clearUserSearchSupplier = () => {
     this.setState({
       userSearchSupplier: "",
+      userSupplierListFilterState: [],
     });
   };
 
@@ -262,6 +267,9 @@ class CreateProductPage extends React.Component {
                       this.searchOtherInformationFunctionThree
                     }
                     userClickSupplierData={this.state.userClickSupplierData}
+                    setModalShow={this.setModalShow}
+                    clearUserSearchSupplier={this.clearUserSearchSupplier}
+                    clearUserClickContent={this.clearUserClickContent}
                   />
                 </div>
               </div>

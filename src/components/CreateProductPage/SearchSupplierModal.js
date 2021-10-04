@@ -13,6 +13,7 @@ const SearchSupplierModal = (props) => {
 
   const openModal = () => {
     props.setModalShow(true);
+    props.clearUserSearchSupplier();
   };
 
   const closeModal = () => {
@@ -35,9 +36,9 @@ const SearchSupplierModal = (props) => {
 
   return (
     <>
-      <Button variant="primary" onClick={openModal}>
+      {/* <Button variant="primary" onClick={openModal}>
         查詢商品
-      </Button>
+      </Button> */}
       <Modal
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -51,7 +52,6 @@ const SearchSupplierModal = (props) => {
               <input
                 type="text"
                 className="form-control"
-                // placeholder="Recipient's username"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
                 style={{ width: "25rem" }}
@@ -71,13 +71,13 @@ const SearchSupplierModal = (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h5>供應商列表</h5>
+          <h5>供應商查詢結果:</h5>
 
           {renderSupplier(props.userSupplierListFilterState)}
         </Modal.Body>
-        <Modal.Footer>
+        {/* <Modal.Footer>
           <Button onClick={closeModal}>Close</Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

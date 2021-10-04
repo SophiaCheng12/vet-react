@@ -2,6 +2,12 @@ import React from "react";
 import styles from "./CreateProductPage.module.css";
 
 class OtherInformation extends React.Component {
+  openModal = () => {
+    console.log("close");
+    this.props.setModalShow(true);
+    this.props.clearUserSearchSupplier();
+  };
+
   render() {
     return (
       <div className={styles.otherInformation}>
@@ -135,11 +141,20 @@ class OtherInformation extends React.Component {
               </label>
 
               <span className={styles.otherInformationButton}>
-                <button type="button" className={`btn ${styles.inquireBtn}`}>
+                <button
+                  type="button"
+                  className={`btn ${styles.inquireBtn}`}
+                  onClick={this.openModal}
+                >
                   <span className={styles.buttonWord}>查詢</span>
                 </button>
                 <button type="button" className={`btn ${styles.removeBtn} `}>
-                  <span className={styles.removeButtonWord}>清除</span>
+                  <span
+                    className={styles.removeButtonWord}
+                    onClick={this.props.clearUserClickContent}
+                  >
+                    清除
+                  </span>
                 </button>
               </span>
             </div>
