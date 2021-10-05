@@ -102,7 +102,7 @@ class ProductMain extends React.Component {
                     <label htmlFor="exampleInputPassword1">
                       <input
                         type="text"
-                        className="form-control commodityAttributesInput"
+                        className="form-control commodityAttributesInput  commodityAttributesInputTwo"
                         id="exampleInputPassword1"
                         value={
                           this.props.searchProduct.commodityAttributes || ""
