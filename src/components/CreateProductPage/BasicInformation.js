@@ -29,7 +29,7 @@ class BasicInformation extends Component {
                 <input
                   type="text"
                   className={`form-control ${styles.input}`}
-                  id="basicInformationProductName"
+                  id={styles.basicInformationProductName}
                   placeholder="2021/08/19"
                   name="basicName"
                   value={this.props.searchBasicInformationData.basicName || ""}

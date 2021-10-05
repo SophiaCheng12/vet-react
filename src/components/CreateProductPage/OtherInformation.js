@@ -272,7 +272,7 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} `}
+                  className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationSelect}  ${styles.otherInformationIfInvalidSelectTwo}`}
                   id="exampleFormControlSelect1"
                   name="otherInformationIfInvalid"
                   value={
@@ -302,7 +302,7 @@ class OtherInformation extends React.Component {
                 </span>
                 <label htmlFor="exampleFormControlSelect1">
                   <select
-                    className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} ${styles.otherInformationTitleInput}  `}
+                    className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect} ${styles.otherInformationTitleInput} ${styles.otherInformationSelect} `}
                     id="exampleFormControlSelect1"
                     name="otherInformationSetPrice"
                     value={
@@ -330,7 +330,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleFormControlSelect1">
                   <select
                     className={`form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}
-                        ${styles.otherInformationTitleInput}  ${styles.discountMerchandiseInput}  `}
+                        ${styles.otherInformationTitleInput}  ${styles.discountMerchandiseInput} ${styles.otherInformationSelect} `}
                     id="exampleFormControlSelect1"
                     name="discountMerchandise"
                     value={
@@ -358,7 +358,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleFormControlSelect1">
                   <select
                     className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
-                        ${styles.otherInformationTitleInput} ${styles.otherInformationBatchNumberInput} `}
+                        ${styles.otherInformationTitleInput} ${styles.otherInformationBatchNumberInput}  ${styles.otherInformationSelect}  `}
                     id="exampleFormControlSelect1"
                     name="otherInformationBatchNumber"
                     value={
@@ -386,7 +386,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleFormControlSelect1">
                   <select
                     className={`form-control ${styles.select} ${styles.otherInformationIfInvalidSelect}
-                        ${styles.otherInformationTitleInput} ${styles.otherInformationInventoryInput} `}
+                        ${styles.otherInformationTitleInput} ${styles.otherInformationInventoryInput} ${styles.otherInformationSelect}`}
                     id="exampleFormControlSelect1"
                     name="otherInformationInventory"
                     value={
@@ -415,7 +415,7 @@ class OtherInformation extends React.Component {
                   <input
                     type="text"
                     className={` form-control ${styles.otherInformationIfInvalidSelect}
-                      ${styles.otherInformationTitleInput}  ${styles.otherInformationSafetyStockInput} ${styles.input}`}
+                      ${styles.otherInformationTitleInput}  ${styles.otherInformationSafetyStockInput} ${styles.input}  ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     name="otherInformationSafetyStock"
                     value={
@@ -439,7 +439,7 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={` form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationDrugOffTitleInput}  `}
+                  className={` form-control ${styles.select}  ${styles.otherInformationIfInvalidSelect}  ${styles.otherInformationDrugOffTitleInput} ${styles.otherInformationSelect} `}
                   id="exampleFormControlSelect1"
                   name="otherInformationDrugOff"
                   value={
@@ -580,7 +580,7 @@ class OtherInformation extends React.Component {
               </span>
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={`form-control ${styles.select}  ${styles.otherInformationSaleCurrencyInput} `}
+                  className={`form-control ${styles.select}  ${styles.otherInformationSaleCurrencyInput} ${styles.otherInformationSelect}`}
                   id="exampleFormControlSelect1"
                   name="otherInformationSaleCurrency"
                   value={
@@ -608,7 +608,7 @@ class OtherInformation extends React.Component {
 
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={`form-control ${styles.select}  ${styles.otherInformationCostCalculationInput} `}
+                  className={`form-control ${styles.select}  ${styles.otherInformationCostCalculationInput} ${styles.otherInformationSelect}`}
                   id="exampleFormControlSelect1"
                   name="otherInformationCostCalculation"
                   value={
@@ -636,7 +636,7 @@ class OtherInformation extends React.Component {
 
               <label htmlFor="exampleFormControlSelect1">
                 <select
-                  className={`form-control ${styles.select}  ${styles.otherInformationTaxCategoryInput} `}
+                  className={`form-control ${styles.select}  ${styles.otherInformationTaxCategoryInput} ${styles.otherInformationSelect}`}
                   id="exampleFormControlSelect1"
                   name="otherInformationTaxCategory"
                   value={
@@ -670,7 +670,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.otherInformationBoxNumberInputTwo}  ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     name="otherInformationBoxNumber"
                     value={
@@ -691,7 +691,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.otherInformationUnitWeightInput}  ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     placeholder=""
                     name="otherInformationUnitWeight"
@@ -715,7 +715,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input} `}
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     name="otherInformationQuantity"
                     value={
@@ -737,7 +737,7 @@ class OtherInformation extends React.Component {
                   <input
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput}
-                       ${styles.otherInformationUnitWeightInput}  ${styles.input}`}
+                       ${styles.otherInformationUnitWeightInput}  ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     placeholder=""
                     name="otherInformationUnitNetWeight"
@@ -761,7 +761,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    className={`form-control ${styles.otherInformationBoxNumberInput} ${styles.input}`}
+                    className={`form-control ${styles.otherInformationBoxNumberInput} ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     name="otherInformationNumber"
                     value={
@@ -783,7 +783,7 @@ class OtherInformation extends React.Component {
                   <input
                     type="text"
                     className={`form-control ${styles.otherInformationBoxNumberInput}
-                        ${styles.otherInformationVolumeInput}  ${styles.input}`}
+                        ${styles.otherInformationVolumeInput}  ${styles.input} ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     placeholder=""
                     name="otherInformationVolume"
@@ -807,7 +807,7 @@ class OtherInformation extends React.Component {
                 <label htmlFor="exampleInputPassword3">
                   <input
                     type="text"
-                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}`}
+                    className={`form-control ${styles.otherInformationBoxNumberInput}  ${styles.input}  ${styles.otherInformationTwo}`}
                     id="exampleInputPassword3"
                     name="otherInformationSpecification"
                     value={

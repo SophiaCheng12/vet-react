@@ -804,6 +804,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .otherInformationSupplierInput {
     width: 9.99rem !important;
   }
+
+  .otherInformationCalendarImg {
+    position: absolute;
+    left: 16.5rem;
+    top: 0.3rem;
+  }
+
+  .otherInformationCalendarImg2 {
+    position: absolute;
+    left: 28rem;
+    top: 0.3rem;
+  }
 }
 
 @media screen and (max-width: 63rem) {
@@ -861,7 +873,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     position: absolute;
     bottom: 3rem;
     right: 0.8rem;
-    border: 1px solid red !important;
   }
 
   .otherInformationDescriptionInput {
@@ -885,13 +896,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .otherInformationCalendarImg {
     position: absolute;
-    left: 16.6rem;
+    left: 15rem;
     top: 0.3rem;
   }
 
   .otherInformationCalendarImg2 {
     position: absolute;
-    left: 30.1rem;
+    left: 26.5rem;
     top: 0.3rem;
   }
 
@@ -1109,6 +1120,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .otherInformationSaleDateInput {
     width: 7rem !important;
     height: 1.88rem !important;
+    font-size: 0.8rem !important;
   }
 
   .otherInformationIfInvalid {
@@ -1132,7 +1144,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .otherInformationCalendarImg2 {
     position: absolute;
-    left: 20.85rem !important;
+    left: 20.5rem !important;
     top: 0.3rem;
   }
 
@@ -1216,6 +1228,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     white-space: nowrap;
   }
 
+  #basicInformationProductName {
+    font-size: 0.8rem;
+  }
+
   .otherInformationDescriptionInput {
     width: 31.7rem !important;
     height: 4.25rem !important;
@@ -1234,7 +1250,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .otherInformationCalendarImg2 {
     position: absolute;
-    left: 20.45rem !important;
+    left: 20.1rem !important;
     top: 0.3rem;
   }
 
@@ -1363,6 +1379,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 4rem !important;
     height: 1.88rem !important;
   }
+
+  .otherInformationSaleDateInput {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (max-width: 42rem) {
@@ -1395,6 +1415,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-color: #ccc;
     outline: none;
     box-shadow: none;
+  }
+
+  .otherInformationSelect {
+    margin-bottom: 0rem;
   }
 
   .basicName {
@@ -1517,6 +1541,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 1rem !important;
   }
 
+  .otherInformationIfInvalidSelectTwo {
+    margin-top: 0rem !important;
+  }
+
   .otherInformationCalendarImgRelative {
     position: relative;
   }
@@ -1623,10 +1651,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 5.65rem !important;
     height: 1.88rem !important;
     margin-top: 1rem;
-  }
-
-  .otherInformationDrugOffTitleInput {
-    width: 17.35rem !important;
   }
 
   .otherInformationTestValueDash {
@@ -1760,7 +1784,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .otherInformationDrugOffTitleInput {
+    width: 17.35rem !important;
     margin-bottom: 0rem;
+    margin-top: 0rem !important;
   }
 
   .otherInformationLeastInput {
@@ -1856,7 +1882,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
   .input {
     /* background: pink; */
-    width: 13rem !important;
+    width: 16rem !important;
     height: 1.88rem;
     border-color: lightgray;
     border-radius: 0rem;
@@ -1864,8 +1890,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .select {
-    width: 13rem !important;
+    width: 16rem !important;
     margin-top: 0rem !important;
+  }
+
+  .otherInformationSelect {
+    width: 13.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .otherInformationTwo {
+    width: 13.1rem !important;
+  }
+
+  .otherInformationSaleDateInput {
+    font-size: 0.1rem;
   }
 
   .otherInformationCalendarImgRelative {
@@ -1897,7 +1936,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .otherInformationDrugOffTitleInput {
-    margin-bottom: 0rem;
+    margin-bottom: 0rem !important;
   }
 
   .otherInformationLeastInput {
@@ -1911,7 +1950,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 
   .otherInformationTaxCategoryInput {
-    margin-bottom: 0rem;
+    margin-bottom: 0rem !important;
   }
 
   .otherInformationCalculationInput {
